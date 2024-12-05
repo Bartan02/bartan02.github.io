@@ -14,7 +14,7 @@ export default function Navbar() {
     useEffect(() => {
         const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-        const syncWithSystem = (e) => setIsDarkMode(e.matches);
+        const syncWithSystem = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
 
         // Initialize state with system preference
         setIsDarkMode(useDark.matches);
