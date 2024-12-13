@@ -40,14 +40,14 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   Experience
               </div>
               <div>
                   <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
-                      <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me] before:to-transparent">
+                      <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
                           <div className="relative flex justify-center items-center group">
-                              <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                              <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                               </div>
                               <div className="w-[calc(100%)] p-4 text-left">
                                   <p> May 2021 </p>
@@ -69,13 +69,13 @@ export default function Home() {
               </div>
           </div>
           <div className={`pt-20`}>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   Education
               </div>
               <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
-                  <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me] before:to-transparent">
+                  <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                               <p> September 2022 - Current </p>
@@ -92,7 +92,7 @@ export default function Home() {
                           </div>
                       </div>
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                                   <p> September 2024 - Current </p>
@@ -110,7 +110,7 @@ export default function Home() {
                           </div>
                       </div>
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                                   <p> September 2018 - April 2022 </p>
@@ -148,7 +148,7 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   University projects
               </div>
               <div className={'text-center py-10'}>
