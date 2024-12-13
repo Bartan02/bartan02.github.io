@@ -9,12 +9,13 @@ export default function Footer() {
                     Contact me.
                 </div>
                 <div className={`md:text-2xl`}>
-                    email: <Link className={"hover:decoration-1 hover:underline"} href={'mailto:contact@badamczyk.eu'}>
+                    email: <Link className={"hover:decoration-1 hover:underline"} href={'mailto:contact@badamczyk.eu'} aria-label="Email">
                     contact@badamczyk.eu
                 </Link>
                     <br/>
                     <div className={"flex gap-3 pt-2"}>
-                        <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline"} href={"https://www.linkedin.com/in/bartosz-a/"} target={"_blank"}>
+                        <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline"} href={"https://www.linkedin.com/in/bartosz-a/"} target={"_blank"}
+                              aria-label="Linkedin profile">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 256"
@@ -43,7 +44,8 @@ export default function Footer() {
                             </svg>
                             Linkedin
                         </Link>
-                        <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline"} href={"https://github.com/Bartan02"} target={"_blank"}>
+                        <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline"} href={"https://github.com/Bartan02"} target={"_blank"}
+                              aria-label="Github profile">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 256"
@@ -79,7 +81,9 @@ export default function Footer() {
                 <div className={`md:text-xl lg:text-right pt-2 ${interTight.className}`}>
                     © 2024 Bartosz Adamczyk |&nbsp;
                     <Link href={'https://github.com/Bartan02/bartan02.github.io/'}
-                          className={"hover:decoration-1 hover:underline"} target={"_blank"}>Source code </Link>
+                          className={"hover:decoration-1 hover:underline"} target={"_blank"}
+                          aria-label="Source code on Github">
+                          Source code </Link>
                 </div>
             </div>
         </footer>

@@ -38,17 +38,17 @@ export default function Navbar() {
 
     return (
         <nav className="fixed m-8 text-xl right-5 z-20">
-            <ul className="navlist list-none flex gap-4">
+            <div className="navlist list-none flex gap-4">
                 <div className={'md:flex hidden gap-4 transition'}>
-                    <li className="hover:font-[900]">
+                    <span className="hover:font-[900]">
                         <Link href="#about-me">About me</Link>
-                    </li>
-                    <li className="hover:font-[900]">
+                    </span>
+                    <span className="hover:font-[900]">
                         <Link href="#portfolio">Portfolio</Link>
-                    </li>
-                    <li className="hover:font-[900]">
+                    </span>
+                    <span className="hover:font-[900]">
                         <Link href="#contact-me">Contact</Link>
-                    </li>
+                    </span>
                 </div>
                 <div className={'md:hidden flex gap-4'}>
                     <div className="inline-block cursor-pointer w-[24px] h-[24px] xl:hidden content-center" onClick={() => setToggle(!toggled)}>
@@ -61,7 +61,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <li
+                <span
                     className="hover:font-[900] hover:cursor-pointer"
                     onClick={toggleDarkMode}
                 >
@@ -71,9 +71,9 @@ export default function Navbar() {
                         width={24}
                         height={24}
                     />
-                </li>
-            </ul>
-            <div className={`mobile-nav ${toggled ? "fixed" : "hidden"} w-full h-svh top-0 left-0 -z-10 opacity-100 bg-[--background] content-center text-center text-6xl`}>
+                </span>
+            </div>
+            <div className={`mobile-nav ${toggled ? "fixed" : "hidden"} w-full h-dvh top-0 left-0 -z-10 opacity-100 bg-[--background] content-center text-center text-6xl`}>
                 <ul>
                     <li className="hover:font-[900] py-5">
                         <Link href="#about-me" onClick={() => setToggle(!toggled)}>About me</Link>
