@@ -40,14 +40,14 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   Experience
               </div>
               <div>
                   <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
-                      <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me] before:to-transparent">
+                      <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
                           <div className="relative flex justify-center items-center group">
-                              <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                              <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                               </div>
                               <div className="w-[calc(100%)] p-4 text-left">
                                   <p> May 2021 </p>
@@ -69,18 +69,18 @@ export default function Home() {
               </div>
           </div>
           <div className={`pt-20`}>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   Education
               </div>
               <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
-                  <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me] before:to-transparent">
+                  <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                               <p> September 2022 - Current </p>
                               <p className={'text-4xl flex'}> HZ University of Applied Sciences
-                                  <Link href={'https://hz.nl/'} target={"_blank"} className={"pl-2"}>
+                                  <Link href={'https://hz.nl/'} target={"_blank"} className={"pl-2"} aria-label="HZ University of Applied Sciences website">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                     </svg>
@@ -92,12 +92,12 @@ export default function Home() {
                           </div>
                       </div>
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                                   <p> September 2024 - Current </p>
                                   <p className={'text-4xl flex'}> The Hague University of Applied Sciences
-                                      <Link href={'https://www.dehaagsehogeschool.nl/'} target={"_blank"} className={"pl-2"}>
+                                      <Link href={'https://www.dehaagsehogeschool.nl/'} target={"_blank"} className={"pl-2"} aria-label="De Haagse Hogeschool website">
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                               <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                           </svg>
@@ -110,12 +110,12 @@ export default function Home() {
                           </div>
                       </div>
                       <div className="relative flex justify-center items-center group">
-                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me] bg-[--about-me] text-[--about-me]">
+                          <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                           </div>
                           <div className="w-[calc(100%)] p-4 text-left">
                                   <p> September 2018 - April 2022 </p>
                                   <p className={'text-4xl flex'}> Technical Secondary School of Mechatronics No 1
-                                      <Link href={'https://tm1.edu.pl/'} target={"_blank"} className={"pl-2"}>
+                                      <Link href={'https://tm1.edu.pl/'} target={"_blank"} className={"pl-2"} aria-label="Technikum Mechatroniczne nr 1 website">
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                               <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                           </svg>
@@ -148,7 +148,7 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio] text-shadow-pop-subheader text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-6xl md:text-[calc(24px+4vw)]`}>
                   University projects
               </div>
               <div className={'text-center py-10'}>

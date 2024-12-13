@@ -6,7 +6,9 @@
   --landing-screen: #D9D9D9;
   --background: #F2F2F2;
   --about-me: #3866F2;
+  --about-me-headings: var(--about-me);
   --portfolio: #154666;
+  --portfolio-headings: var(--portfolio);
   --footer: #A6A6A6;
   --font: #000000;
 }
@@ -15,7 +17,9 @@
   --landing-screen: #9C9C9C !important;
   --background: #383838 !important;
   --about-me: #102B76 !important;
+  --about-me-headings: white !important;
   --portfolio: #061E2D !important;
+  --portfolio-headings: white !important;
   --footer: #636363 !important;
   --font: #FFFFFF !important;
 }
