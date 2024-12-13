@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {interTightHeader} from "@/app/ui/fonts";
+import {interTight, interTightHeader} from "@/app/ui/fonts";
 
 export default function Footer() {
     return (
@@ -76,8 +76,10 @@ export default function Footer() {
                 </div>
             </div>
             <div className={`content-end`}>
-                <div className={`md:text-2xl lg:text-right`}>
-                    © 2024 Bartosz Adamczyk
+                <div className={`md:text-xl lg:text-right pt-2 ${interTight.className}`}>
+                    © 2024 Bartosz Adamczyk |&nbsp;
+                    <Link href={'https://github.com/Bartan02/bartan02.github.io/'}
+                          className={"hover:decoration-1 hover:underline"} target={"_blank"}>Source code </Link>
                 </div>
             </div>
         </footer>
