@@ -37,7 +37,7 @@ export default function Navbar() {
     }, [isDarkMode]);
 
     return (
-        <nav className="fixed m-8 text-xl right-5 z-20">
+        <nav className="fixed m-8 text-xl right-0 md:right-5 z-20">
             <div className="navlist list-none flex gap-4">
                 <div className={'md:flex hidden gap-4 transition'}>
                     <span className="hover:font-[900]">

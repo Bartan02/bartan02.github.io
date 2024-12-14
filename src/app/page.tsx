@@ -14,15 +14,15 @@ export default function Home() {
   return (
       <div>
       <Navbar/>
-      <div className={`h-svh w-full bg-[--landing-screen] flex md:justify-start justify-center overflow-hidden`}>
-        <div className={`content-end`}>
+      <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
+        <div className={`content-end sm:ml-16`}>
             <Image
-                className={`2xl:w-[calc(200px+35vw)] md:w-[calc(200px+35vw+10vh)]`}
+                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)]`}
                 src={bartoszadamczyk}
                 alt="Bartosz Adamczyk Photo"
             />
         </div>
-          <div className={`absolute right-14 md:right-32 2xl:top-1/2 md:top-[25vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
+          <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
               <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
           </div>
       </div>
