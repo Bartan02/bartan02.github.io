@@ -1,12 +1,15 @@
+"use client"
 import Link from "next/link";
 import {interTight, interTightHeader} from "@/app/ui/fonts";
+import {useTranslations} from "next-intl";
 
 export default function Footer() {
+    const t = useTranslations("");
     return (
         <footer id={"contact-me"} className={`w-full bg-[--footer] ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
             <div>
                 <div className={`text-5xl md:text-8xl`}>
-                    Contact me.
+                    {t('Contact me')}
                 </div>
                 <div className={`md:text-2xl`}>
                     email: <Link className={"hover:decoration-1 hover:underline"} href={'mailto:contact@badamczyk.eu'} aria-label="Email">
@@ -83,7 +86,7 @@ export default function Footer() {
                     <Link href={'https://github.com/Bartan02/bartan02.github.io/'}
                           className={"hover:decoration-1 hover:underline"} target={"_blank"}
                           aria-label="Source code on Github">
-                          Source code </Link>
+                        {t('Source code')} </Link>
                 </div>
             </div>
         </footer>
