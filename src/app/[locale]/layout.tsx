@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "../ui/globals.css";
 import {interTight} from "@/app/ui/fonts";
 import Providers from "@/app/[locale]/providers";
