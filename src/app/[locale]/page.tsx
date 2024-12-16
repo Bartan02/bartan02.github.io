@@ -19,7 +19,7 @@ export default function Home() {
       <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
         <div className={`content-end sm:ml-16`}>
             <Image
-                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)]`}
+                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)]`}
                 src={bartoszadamczyk}
                 alt="Bartosz Adamczyk Photo"
             />
@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
                   {t('Experience')}
               </div>
               <div>
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
           </div>
           <div className={`pt-20`}>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
                   {t('Education')}
               </div>
               <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
@@ -153,7 +153,7 @@ export default function Home() {
       </div>
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-6xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-5xl md:text-[calc(24px+4vw)]`}>
                   {t('University projects')}
               </div>
               <div className={'text-center py-10'}>
