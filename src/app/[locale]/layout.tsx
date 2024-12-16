@@ -1,6 +1,7 @@
 import "../ui/globals.css";
 import {interTight} from "@/app/ui/fonts";
 import Providers from "@/app/[locale]/providers";
+import {Metadata} from "next";
 
 const LOCALES = ["en", "nl", "fr", "pl"];
 
@@ -16,6 +17,14 @@ async function getMessages(locale: string) {
 
     return messageModule.default;
 }
+
+export const metadata: Metadata = {
+    title: "Bartosz Adamczyk",
+    description: "Bartosz Adamczyk's portfolio page",
+    icons: {
+        icon: '/favicon.ico',
+    },
+};
 
 interface RootLayoutProps {
     children: React.ReactNode;

@@ -59,16 +59,15 @@ export default function Navbar() {
                         <Link href="#contact-me">{t('Contact')}</Link>
                     </span>
                 </div>
-                <div className={'md:hidden flex gap-4'}>
-                    <div className="inline-block cursor-pointer w-[24px] h-[24px] xl:hidden content-center" onClick={() => setToggle(!toggled)}>
-                        <div
-                            className={`${toggled ? "change" : ""}`}
-                        >
-                            <div className={`bar1`}></div>
-                            <div className={`bar2`}></div>
-                            <div className={`bar3`}></div>
-                        </div>
-                    </div>
+                <div className={'gap-4 cursor-pointer'}>
+                    <select name="lang" id="lang" className={'bg-transparent border-0'} value={locale} onChange={async e => {
+                        const currentPath = window.location.pathname.slice(3)
+                        const targetPath = '/' + e.target.value + currentPath
+                        router.push(targetPath)
+                    }}>
+                        <option value="en">🇬🇧</option>
+                        <option value="pl">🇵🇱</option>
+                    </select>
                 </div>
                 <span
                     className="hover:font-[900] hover:cursor-pointer"
@@ -81,15 +80,16 @@ export default function Navbar() {
                         height={24}
                     />
                 </span>
-                <div className={'gap-4 cursor-pointer '}>
-                    <select name="lang" id="lang" className={'bg-transparent border-0'} value={locale} onChange={async e => {
-                        const currentPath = window.location.pathname.slice(3)
-                        const targetPath = '/' + e.target.value + currentPath
-                        router.push(targetPath)
-                    }}>
-                        <option value="en">🇬🇧</option>
-                        <option value="pl">🇵🇱</option>
-                    </select>
+                <div className={'md:hidden flex gap-4'}>
+                    <div className="inline-block cursor-pointer w-[24px] h-[24px] xl:hidden content-center" onClick={() => setToggle(!toggled)}>
+                        <div
+                            className={`${toggled ? "change" : ""}`}
+                        >
+                            <div className={`bar1`}></div>
+                            <div className={`bar2`}></div>
+                            <div className={`bar3`}></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className={`mobile-nav ${toggled ? "fixed" : "hidden"} w-full h-dvh top-0 left-0 -z-10 opacity-100 bg-[--background] content-center text-center text-6xl`}>
