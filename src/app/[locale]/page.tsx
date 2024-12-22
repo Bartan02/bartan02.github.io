@@ -163,7 +163,7 @@ export default function Home() {
                   <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)] grid md:grid-cols-2 gap-3`}>
                       <div className={'relative'}>
                           <Image src={sporton} alt="Sporton project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> SportON </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -175,7 +175,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={stepup} alt="StepUP! project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> StepUp </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -188,7 +188,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={jrcz} alt="JRCZ Temperature Monitoring Application project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> JRCZ Temperature Monitoring Application </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -199,7 +199,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={oopgame} alt="OOP Educational Game" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> OOP Educational Game </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
