@@ -11,6 +11,12 @@
   --portfolio-headings: var(--portfolio);
   --footer: #A6A6A6;
   --font: #000000;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 :root[class*='dark-mode'] {

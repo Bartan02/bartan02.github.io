@@ -19,7 +19,7 @@ export default function Home() {
       <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
         <div className={`content-end sm:ml-16`}>
             <Image
-                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)]`}
+                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)] pointer-events-none`}
                 src={bartoszadamczyk}
                 alt="Bartosz Adamczyk Photo"
             />
