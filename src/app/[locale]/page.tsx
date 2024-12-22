@@ -10,6 +10,7 @@ import jrcz from "@/public/image/projects/jrcz.webp"
 import oopgame from "@/public/image/projects/oopgame.webp"
 import stepup from "@/public/image/projects/stepup.webp"
 import { useTranslations } from "next-intl";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Home() {
     const t = useTranslations("");
@@ -25,12 +26,21 @@ export default function Home() {
             />
         </div>
           <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-              <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
+              <ScrollAnimation animateIn="text-shadow-pop-right" animateOnce={true} initiallyVisible={true}>
+                    <span className={"tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
+              </ScrollAnimation> 
+          </div>
+          <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] top-[calc(45vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
+          <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true} initiallyVisible={false} delay={600}>
+                    <span className={"motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block"}> {t('Discover')} &#x2193; </span>
+              </ScrollAnimation>
           </div>
       </div>
       <div id={'about-me'} className={'w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 min-h-[500px] h-fit bg-[--about-me] place-items-center'}>
-          <div className={`text-shadow-pop-about-me ${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
-              {t('About me')}
+          <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
+              <ScrollAnimation animateIn="text-shadow-pop-about-me" animateOnce={true} initiallyVisible={true}>
+                {t('About me')}
+              </ScrollAnimation>
           </div>
           <div className={`w-[1px] h-3/5 bg-white lg:block hidden`}>
           </div>
@@ -44,6 +54,7 @@ export default function Home() {
           </div>
       </div>
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
+        <ScrollAnimation animateIn="motion-preset-slide-right" animateOnce={true}>
           <div>
               <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
                   {t('Experience')}
@@ -139,10 +150,13 @@ export default function Home() {
                   </div>
               </div>
           </div>
+        </ScrollAnimation>
       </div>
       <div id={'portfolio'} className={'w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 md:min-h-[500px] h-fit bg-[--portfolio] place-items-center'}>
-          <div className={`text-shadow-pop-portfolio ${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
-              Portfolio
+          <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
+            <ScrollAnimation animateIn="text-shadow-pop-portfolio" animateOnce={true} initiallyVisible={true}>
+                Portfolio
+            </ScrollAnimation>
           </div>
           <div className={`w-[1px] h-3/5 bg-white lg:block hidden`}>
           </div>
@@ -152,6 +166,7 @@ export default function Home() {
           </div>
       </div>
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
+        <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true}>
           <div>
               <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-5xl md:text-[calc(24px+4vw)]`}>
                   {t('University projects')}
@@ -211,6 +226,7 @@ export default function Home() {
                   </div>
               </div>
           </div>
+        </ScrollAnimation>
       </div>
       <Footer/>
     </div>
