@@ -26,14 +26,10 @@ export default function Home() {
             />
         </div>
           <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-              <ScrollAnimation animateIn="text-shadow-pop-right" animateOnce={true} initiallyVisible={true}>
-                    <span className={"tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
-              </ScrollAnimation> 
+                <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
           </div>
           <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] top-[calc(45vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-          <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true} initiallyVisible={false} delay={600}>
-                    <span className={"motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block"}> {t('Discover')} &#x2193; </span>
-              </ScrollAnimation>
+                <span className={"motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block"}> {t('#discover')} &#x2193; </span>
           </div>
       </div>
       <div id={'about-me'} className={'w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 min-h-[500px] h-fit bg-[--about-me] place-items-center'}>
@@ -56,7 +52,7 @@ export default function Home() {
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
         <ScrollAnimation animateIn="motion-preset-slide-right" animateOnce={true}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                   {t('Experience')}
               </div>
               <div>
@@ -84,7 +80,7 @@ export default function Home() {
               </div>
           </div>
           <div className={`pt-20`}>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                   {t('Education')}
               </div>
               <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
@@ -168,7 +164,7 @@ export default function Home() {
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
         <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-[calc(8vw)] md:text-[calc(24px+4vw)]`}>
                   {t('University projects')}
               </div>
               <div className={'text-center py-10'}>
