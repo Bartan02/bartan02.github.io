@@ -4,15 +4,21 @@
   <url>
     <loc>https://badamczyk.eu/</loc>
     <lastmod>2024-12-16T09:16:57+00:00</lastmod>
-    <loc>https://badamczyk.eu/en/</loc>
+  </url>
+  <url>
+    <loc>https://badamczyk.eu/en</loc>
     <lastmod>2024-12-16T09:16:57+00:00</lastmod>
-    <loc>https://badamczyk.eu/pl/</loc>
+  </url>
+  <url>
+    <loc>https://badamczyk.eu/pl</loc>
     <lastmod>2024-12-16T09:16:57+00:00</lastmod>
-    <loc>https://badamczyk.eu/fr</loc>
-    <lastmod>2024-12-16T09:16:57+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://badamczyk.eu/nl</loc>
     <lastmod>2024-12-16T09:16:57+00:00</lastmod>
   </url>
-
-
+  <url>
+    <loc>https://badamczyk.eu/fr</loc>
+    <lastmod>2024-12-16T09:16:57+00:00</lastmod>
+  </url>
 </urlset>
