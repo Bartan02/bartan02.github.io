@@ -147,7 +147,7 @@ export default function Home() {
           <div className={`w-[1px] h-3/5 bg-white lg:block hidden`}>
           </div>
           <div className={`lg:text-2xl text-xl lg:pl-20 lg:pr-10 p-10 lg:order-first`}>
-              {t('Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement')}&nbsp;
+              {t('Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement')}.&nbsp;
               {t('These projects highlight a growing passion for technology and problem-solving')}
           </div>
       </div>

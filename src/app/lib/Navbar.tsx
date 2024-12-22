@@ -65,8 +65,9 @@ export default function Navbar() {
                         const targetPath = '/' + e.target.value + currentPath
                         router.push(targetPath)
                     }}>
-                        <option value="en">🇬🇧</option>
-                        <option value="pl">🇵🇱</option>
+                        <option value="en">EN</option>
+                        <option value="nl">NL</option>
+                        <option value="pl">PL</option>
                     </select>
                 </div>
                 <span
