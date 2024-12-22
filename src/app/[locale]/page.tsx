@@ -10,6 +10,7 @@ import jrcz from "@/public/image/projects/jrcz.webp"
 import oopgame from "@/public/image/projects/oopgame.webp"
 import stepup from "@/public/image/projects/stepup.webp"
 import { useTranslations } from "next-intl";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Home() {
     const t = useTranslations("");
@@ -19,18 +20,23 @@ export default function Home() {
       <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
         <div className={`content-end sm:ml-16`}>
             <Image
-                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)]`}
+                className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)] pointer-events-none`}
                 src={bartoszadamczyk}
                 alt="Bartosz Adamczyk Photo"
             />
         </div>
           <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-              <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
+                <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br/> ADAMCZYK </span>
+          </div>
+          <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] top-[calc(45vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
+                <span className={"motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block"}> {t('#discover')} &#x2193; </span>
           </div>
       </div>
       <div id={'about-me'} className={'w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 min-h-[500px] h-fit bg-[--about-me] place-items-center'}>
-          <div className={`text-shadow-pop-about-me ${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
-              {t('About me')}
+          <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
+              <ScrollAnimation animateIn="text-shadow-pop-about-me" animateOnce={true} initiallyVisible={true}>
+                {t('About me')}
+              </ScrollAnimation>
           </div>
           <div className={`w-[1px] h-3/5 bg-white lg:block hidden`}>
           </div>
@@ -44,8 +50,9 @@ export default function Home() {
           </div>
       </div>
       <div className={'w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]'}>
+        <ScrollAnimation animateIn="motion-preset-slide-right" animateOnce={true}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                   {t('Experience')}
               </div>
               <div>
@@ -73,7 +80,7 @@ export default function Home() {
               </div>
           </div>
           <div className={`pt-20`}>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                   {t('Education')}
               </div>
               <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)]`}>
@@ -139,21 +146,25 @@ export default function Home() {
                   </div>
               </div>
           </div>
+        </ScrollAnimation>
       </div>
       <div id={'portfolio'} className={'w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 md:min-h-[500px] h-fit bg-[--portfolio] place-items-center'}>
-          <div className={`text-shadow-pop-portfolio ${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
-              Portfolio
+          <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
+            <ScrollAnimation animateIn="text-shadow-pop-portfolio" animateOnce={true} initiallyVisible={true}>
+                Portfolio
+            </ScrollAnimation>
           </div>
           <div className={`w-[1px] h-3/5 bg-white lg:block hidden`}>
           </div>
           <div className={`lg:text-2xl text-xl lg:pl-20 lg:pr-10 p-10 lg:order-first`}>
-              {t('Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement')}&nbsp;
+              {t('Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement')}.&nbsp;
               {t('These projects highlight a growing passion for technology and problem-solving')}
           </div>
       </div>
       <div className={'w-full p-5 py-12 md:p-20 bg-[--background]]'}>
+        <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true}>
           <div>
-              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-5xl md:text-[calc(24px+4vw)]`}>
+              <div className={`${interTightHeader.className} pb-5 text-center text-[--portfolio-headings] text-[calc(8vw)] md:text-[calc(24px+4vw)]`}>
                   {t('University projects')}
               </div>
               <div className={'text-center py-10'}>
@@ -163,7 +174,7 @@ export default function Home() {
                   <div className={`xl:px-[calc(15vw)] lg:px-[calc(7vw)] grid md:grid-cols-2 gap-3`}>
                       <div className={'relative'}>
                           <Image src={sporton} alt="Sporton project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> SportON </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -175,7 +186,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={stepup} alt="StepUP! project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> StepUp </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -188,7 +199,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={jrcz} alt="JRCZ Temperature Monitoring Application project" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> JRCZ Temperature Monitoring Application </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -199,7 +210,7 @@ export default function Home() {
                       </div>
                       <div className={'relative'}>
                           <Image src={oopgame} alt="OOP Educational Game" className="image"/>
-                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-100 opacity-0 bg-[--portfolio]">
+                          <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
                               <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                                   <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}> OOP Educational Game </span> <br/><br/>
                                   <span className={'lg:text-lg'}>
@@ -211,6 +222,7 @@ export default function Home() {
                   </div>
               </div>
           </div>
+        </ScrollAnimation>
       </div>
       <Footer/>
     </div>

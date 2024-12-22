@@ -2,7 +2,7 @@
   "About me": "About me",
   "Portfolio": "Portfolio",
   "Contact": "Contact",
-  "Contact me": "Contact me",
+  "Contact me": "Contact me.",
   "Source code": "Source code",
   "Website": "Website",
   "I am Bartosz Adamczyk, currently ICT student at HZ University of Applied Sciences, with a passion for technology, innovation, and creating impactful digital experiences": "I am Bartosz Adamczyk, currently ICT student at HZ University of Applied Sciences, with a passion for technology, innovation, and creating impactful digital experiences.",
@@ -37,5 +37,6 @@
   "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste": "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste.",
   "A startup project that enhances the sports experience by providing a platform for broad finding, simple reserving, and easy accessing of sports facilities": "A startup project that enhances the sports experience by providing a platform for broad finding, simple reserving, and easy accessing of sports facilities.",
   "An application that connects people through sports": "An application that connects people through sports.",
-  "It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues": "It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues."
+  "It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues": "It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues.",
+  "#discover": "#discover"
 }

@@ -13,7 +13,7 @@ export default function Footer() {
                 </div>
                 <div className={`md:text-2xl`}>
                     email: <Link className={"hover:decoration-1 hover:underline"} href={'mailto:contact@badamczyk.eu'} aria-label="Email">
-                    contact@badamczyk.eu
+                    <span className="select-text"> contact@badamczyk.eu </span>
                 </Link>
                     <br/>
                     <div className={"flex gap-3 pt-2"}>
