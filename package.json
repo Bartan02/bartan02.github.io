@@ -20,14 +20,16 @@
     "tailwindcss-motion": "^1.0.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^15.1.2",
     "@types/jquery": "^3.5.32",
     "@types/node": "^20.17.10",
     "@types/react": "^18.3.18",
     "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18.3.5",
     "eslint": "^9.17.0",
-    "eslint-config-next": "14.2.9",
+    "eslint-config-next": "^15.1.2",
     "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   }
