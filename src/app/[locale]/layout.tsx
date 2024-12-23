@@ -28,16 +28,16 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }
 
 export default async function RootLayout({
   children, params
 }: RootLayoutProps) {
-    const messages = await getMessages(params.locale);
+    const messages = await getMessages((await params).locale);
   return (
-    <html lang={params.locale}>
-    <Providers messages={messages} locale={params.locale}>
+    <html lang={(await params).locale}>
+    <Providers messages={messages} locale={(await params).locale}>
       <body
         className={`${interTight.className} antialiased`}
         suppressHydrationWarning={true}
