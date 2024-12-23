@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import darkModeOff from "@/public/image/icons/icons8-dark-mode-32.png";
 import darkModeOn from "@/public/image/icons/icons8-do-not-disturb-ios-32.png";
-import {useLocale, useTranslations} from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from 'next/navigation'
 
 export default function Navbar() {

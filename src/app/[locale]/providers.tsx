@@ -3,10 +3,10 @@
 import { NextIntlClientProvider } from "next-intl";
 
 function Providers({
-                       children,
-                       locale,
-                       messages,
-                   }: {
+    children,
+    locale,
+    messages,
+}: {
     children: React.ReactNode;
     locale: string;
     messages: Record<string, string>;

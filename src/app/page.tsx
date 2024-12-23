@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import {Metadata} from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Bartosz Adamczyk",
