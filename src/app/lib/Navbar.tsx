@@ -66,6 +66,7 @@ export default function Navbar() {
                         router.push(targetPath)
                     }}>
                         <option value="en">EN</option>
+                        <option value="fr">FR</option>
                         <option value="nl">NL</option>
                         <option value="pl">PL</option>
                     </select>
