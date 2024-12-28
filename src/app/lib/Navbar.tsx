@@ -44,11 +44,26 @@ export default function Navbar() {
 
     const router = useRouter()
 
+    const SCROLLED_STATE_CLASS = "shadow-lg"
+
+    // OnScroll event handler
+    const onScroll = () => {
+        const navbar = document.getElementById("nav")!;
+        const scroll = document.documentElement.scrollTop
+        if (scroll > 0) {
+            navbar.classList.add(SCROLLED_STATE_CLASS);
+        } else {
+            navbar.classList.remove(SCROLLED_STATE_CLASS)
+        }
+    }
+
+    // Use the function
+    window.addEventListener('scroll', onScroll)
 
     return (
-        <nav className="fixed m-8 text-xl right-0 md:right-5 z-20">
+        <nav id="nav" className="transition-all fixed m-8 text-xl right-0 md:right-5 z-20 bg-[--landing-screen] rounded-full p-2 px-3 sm:px-4">
             <div className="navlist list-none flex gap-4 items-center">
-                <div className={'md:flex hidden gap-4 transition'}>
+                <div className={'md:flex hidden gap-4'}>
                     <span className="hover:font-[900]">
                         <Link href="#about-me">{t('About me')}</Link>
                     </span>
