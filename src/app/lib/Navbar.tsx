@@ -46,10 +46,6 @@ export default function Navbar() {
 
     const SCROLLED_STATE_CLASS = "shadow-lg"
 
-<<<<<<< HEAD
-=======
-    // OnScroll event handler
->>>>>>> 77a33288d061a1a39e7187717dbd7f020533c6f5
     const onScroll = () => {
         const navbar = document.getElementById("nav")!;
         const scroll = document.documentElement.scrollTop
@@ -59,15 +55,9 @@ export default function Navbar() {
             navbar.classList.remove(SCROLLED_STATE_CLASS)
         }
     }
-<<<<<<< HEAD
     useEffect(() => {
         window.addEventListener('scroll', onScroll)
     }, []);
-=======
-
-    // Use the function
-    window.addEventListener('scroll', onScroll)
->>>>>>> 77a33288d061a1a39e7187717dbd7f020533c6f5
 
     return (
         <nav id="nav" className="transition-all fixed m-8 text-xl right-0 md:right-5 z-20 bg-[--landing-screen] rounded-full p-2 px-3 sm:px-4">
