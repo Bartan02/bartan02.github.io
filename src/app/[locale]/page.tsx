@@ -15,7 +15,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 export default function Home() {
     const t = useTranslations("");
     return (
-        <div>
+        <div className="overflow-hidden">
             <Navbar />
             <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
                 <div className={`content-end sm:ml-16`}>
