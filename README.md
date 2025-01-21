@@ -10,6 +10,14 @@ The website is built using a range of front-end and back-end technologies:
 - **TypeScript:** Superset of JavaScript for type safety and better developer experience.
 - **Tailwind CSS:** CSS preprocessor for better styling organization and maintainability.
 
+The following libraries/frameworks were implemented on this portfolio website to enrich it:
+
+- **i18next:** internationalization framework that enables multi-language support in the portfolio.
+- **animate.css:** CSS animation library that provides pre-defined animations to bring elements to life.
+- **react-animate-on-scroll:** React wrapper for animate.css, allowing elements to animate when they appear in the viewport.
+- **tailwindcss-motion:** extends Tailwind CSS with utility classes for motion and transitions.
+
+
 ### DevOps & Hosting
 - **Version Control (Git):** To keep track of changes and manage different project versions.
 - **GitHub:** For repository management and collaboration.
@@ -21,6 +29,7 @@ The website is built using a range of front-end and back-end technologies:
 - **Interactive Elements:** Includes animations, dynamic forms, and user-friendly interfaces.
 - **Responsive Design:** Built to provide an optimal viewing experience across all devices.
 - **Dark/Light Mode:** Theme toggle for user preference.
+- **Language Choice:** View the page and read its content with one of available languages: English, French, Dutch and Polish.
 
 ## 🚀 Getting Started
 
@@ -33,17 +42,18 @@ To run this project locally, follow these steps:
 3. **Install dependencies:**
    ```npm install```
 4. **Start the development server:**
-   ```npm start```
+   ```npm run dev```
 5. **Open your browser and navigate to:**
    ```http://localhost:3000```
 
 ### 🔧 Project Structure
 
-	•	/src: Contains all source code files (components, styles, assets, etc.)
-	•	/src/app: Includes all pages of this website.
-	•	/src/public: Public static files like images and index.html.
-	•	/src/app/lib: All website elements like e.g. header, footer.
-    •	/src/app/ui: All styling-related files incl. fonts configuration and animations.
+	/src:               Contains all source code files (components, styles, assets, etc.).
+	/src/hooks:         Includes some custom hooks that help e.g. improve code reusability and maintainability.
+	/src/public:        Public static files like images and index.html.
+    /src/app/[locale]:  Includes all pages of this website.
+	/src/app/lib:       All website elements like e.g. header, footer.
+    /src/app/ui:        All styling-related files incl. fonts configuration and animations.
 
 ## 📜 License
 
