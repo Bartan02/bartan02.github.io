@@ -106,7 +106,7 @@ export default function Home() {
                                     <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]">
                                     </div>
                                     <div className="w-[calc(100%)] p-4 text-left">
-                                        <p> {t('September')} 2024 - {t('Current')} </p>
+                                        <p> {t('September')} 2024 - {t('January')} 2025 </p>
                                         <p className={'text-4xl flex'}> {t('The Hague University of Applied Sciences')}
                                             <Link href={'https://www.dehaagsehogeschool.nl/'} target={"_blank"} className={"pl-2"} aria-label="De Haagse Hogeschool website">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
