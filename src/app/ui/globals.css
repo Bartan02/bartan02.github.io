@@ -4,6 +4,7 @@
 
 :root {
   --landing-screen: #D9D9D9;
+  --highlight: #9C9C9C;
   --background: #F2F2F2;
   --about-me: #3866F2;
   --about-me-headings: var(--about-me);
@@ -21,6 +22,7 @@
 
 :root[class*='dark-mode'] {
   --landing-screen: #9C9C9C !important;
+  --highlight: #8a8a8a !important;
   --background: #383838 !important;
   --about-me: #102B76 !important;
   --about-me-headings: white !important;
@@ -57,12 +59,6 @@ body {
   color: var(--font);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 .navlist{
