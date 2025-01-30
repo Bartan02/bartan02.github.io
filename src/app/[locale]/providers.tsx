@@ -12,7 +12,7 @@ function Providers({
     messages: Record<string, string>;
 }) {
     return (
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider timeZone={"Europe/Amsterdam"} locale={locale} messages={messages}>
             {children}
         </NextIntlClientProvider>
     );
