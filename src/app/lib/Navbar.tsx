@@ -1,7 +1,7 @@
 "use client"
 import {useState, useEffect, useLayoutEffect} from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import darkModeOff from "@/public/image/icons/icons8-dark-mode-32.png";
 import darkModeOn from "@/public/image/icons/icons8-do-not-disturb-ios-32.png";
 import { useLocale, useTranslations } from "next-intl";
@@ -77,7 +77,7 @@ export default function Navbar() {
         return undefined;
     }
 
-    const [imageSrc, setImageSrc] = useState<string>(uk_icon);
+    const [imageSrc, setImageSrc] = useState<StaticImageData>(uk_icon);
 
     useLayoutEffect(() => {
         switch(locale){
