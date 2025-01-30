@@ -18,17 +18,17 @@ export default function Home() {
         <div className="overflow-hidden">
             <Navbar />
             <div className={`h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden`}>
-                <div className={`content-end sm:ml-16`}>
+                <div className={`content-end sm:ml-12 lg:ml-16 xl:ml-24 2xl:ml-32`}>
                     <Image
-                        className={`2xl:w-[calc(200px+35vw)] sm:w-[calc(300px+20vw+10vh)] w-[calc(200px+10vw+10vh)] pointer-events-none`}
+                        className={`sm:w-[calc(100px+15vw+30vh)] w-[calc(200px+10vw+10vh)] pointer-events-none`}
                         src={bartoszadamczyk}
                         alt="Bartosz Adamczyk Photo"
                     />
                 </div>
-                <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(25vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
+                <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(17vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
                     <span className={"text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block"}> BARTOSZ <br /> ADAMCZYK </span>
                 </div>
-                <div className={`absolute right-7 sm:right-14 lg:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] top-[calc(45vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
+                <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] sm:block hidden top-[calc(35vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
                     <span className={"motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block"}> {t('#discover')} &#x2193; </span>
                 </div>
             </div>
