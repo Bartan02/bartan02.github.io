@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import bartoszadamczyk from "../../public/image/bartoszadamczyk.webp";
 import { interTightHeader } from "@/app/ui/fonts";
 import Navbar from "@/app/lib/Navbar";
@@ -11,6 +11,7 @@ import oopgame from "@/public/image/projects/oopgame.webp"
 import stepup from "@/public/image/projects/stepup.webp"
 import { useTranslations } from "next-intl";
 import ScrollAnimation from 'react-animate-on-scroll';
+import React from "react";
 
 const projects = [
     {
@@ -43,7 +44,15 @@ const projects = [
     }
 ];
 
-const TimelineItem = ({ date, company, location, position, details }) => (
+interface TimelineItemProps {
+    date: string;
+    company: string;
+    location: string;
+    position: string;
+    details: string[];
+}
+
+const TimelineItem: React.FC<TimelineItemProps> = ({ date, company, location, position, details }) => (
     <div className="relative flex justify-center items-center group">
         <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]"></div>
         <div className="w-[calc(100%)] p-4 text-left">
@@ -62,7 +71,16 @@ const TimelineItem = ({ date, company, location, position, details }) => (
     </div>
 );
 
-const ProjectItem = ({ src, alt, title, description, link, linkText }) => (
+interface ProjectItemProps {
+    src: StaticImageData;
+    alt: string;
+    title: string;
+    description: string;
+    link?: string;
+    linkText?: string;
+}
+
+const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description, link, linkText }) => (
     <div className="relative">
         <Image src={src} alt={alt} className="image" />
         <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
