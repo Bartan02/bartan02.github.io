@@ -146,6 +146,13 @@ export default function Home() {
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)]">
                             <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
                                 <TimelineItem
+                                    date={`${t('February')} 2025 - ${t('Current')}`}
+                                    company="Joint Research Center Zeeland"
+                                    location={t('Middelburg, Netherlands')}
+                                    position={t('Internship')}
+                                    details={[t("Software Engineering Internship")]}
+                                />
+                                <TimelineItem
                                     date={`${t('May')} 2021`}
                                     company="Diebold Nixdorf"
                                     location={t('Warsaw, Poland')}
