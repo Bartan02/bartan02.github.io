@@ -26,7 +26,7 @@ const projects = [
         src: stepup,
         alt: "StepUP! project",
         title: "StepUp",
-        description: "An application that connects people through sports. It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues",
+        description: "An application that connects people through sports It tracks your performance during activity and it also allows you to meet/chat with other sport colleagues",
         link: "https://github.com/Bartan02/positive-health-int-team-2",
         linkText: "Source code"
     },
@@ -80,26 +80,28 @@ interface ProjectItemProps {
     linkText?: string;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description, link, linkText }) => (
-    <div className="relative">
+const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description, link, linkText }) => {
+    const t = useTranslations("");
+    return (
+        <div className="relative">
         <Image src={src} alt={alt} className="image" />
         <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
             <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                 <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}>{title}</span>
                 <br /><br />
-                <span className="lg:text-lg">{description}</span>
+                <span className="lg:text-lg">{t(description)}</span>
                 {link && (
                     <>
                         <br /><br />
                         <span>
-                            <Link href={link} className="underline decoration-1" target="_blank">{linkText}</Link>
-                        </span>
+                                <Link href={link} className="underline decoration-1" target="_blank">{t(linkText)}</Link>
+                            </span>
                     </>
                 )}
             </div>
         </div>
     </div>
-);
+    )};
 
 export default function Home() {
     const t = useTranslations("");
