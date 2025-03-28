@@ -54,7 +54,7 @@ interface TimelineItemProps {
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ date, company, location, position, details }) => (
     <div className="relative flex justify-center items-center group">
-        <div className="flex items-center justify-center w-4 h-4 rounded-full border border-[--about-me-headings] bg-[--about-me-headings] text-[--about-me-headings]"></div>
+        <div className="flex items-center justify-center w-4 h-4 rounded-full border border-(--about-me-headings) bg-(--about-me-headings) text-(--about-me-headings)"></div>
         <div className="w-[calc(100%)] p-4 text-left">
             <p>{date}</p>
             <p className="text-4xl flex">{company}</p>
@@ -85,7 +85,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description,
     return (
         <div className="relative">
         <Image src={src} alt={alt} className="image" />
-        <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-[--portfolio]">
+        <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-(--portfolio)">
             <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
                 <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}>{title}</span>
                 <br /><br />
@@ -108,7 +108,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="h-svh w-full bg-[--landing-screen] flex sm:justify-start justify-center overflow-hidden">
+            <section className="h-svh w-full bg-(--landing-screen) flex sm:justify-start justify-center overflow-hidden">
                 <div className="content-end sm:ml-12 lg:ml-16 xl:ml-24 2xl:ml-32">
                     <Image
                         className="sm:w-[calc(100px+15vw+30vh)] w-[calc(200px+10vw+10vh)] pointer-events-none"
@@ -120,10 +120,10 @@ export default function Home() {
                     <span className="text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block">BARTOSZ <br /> ADAMCZYK</span>
                 </div>
                 <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] sm:block hidden top-[calc(35vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-                    <span className="motion-preset-oscillate motion-duration-2000 tracking-wide text-[--font] text-md sm:text-2xl leading-none inline-block">{t('#discover')} &#x2193;</span>
+                    <span className="motion-preset-oscillate motion-duration-2000 tracking-wide text-(--font) text-md sm:text-2xl leading-none inline-block">{t('#discover')} &#x2193;</span>
                 </div>
             </section>
-            <section id="about-me" className="w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 min-h-[500px] h-fit bg-[--about-me] place-items-center">
+            <section id="about-me" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 min-h-[500px] h-fit bg-(--about-me) place-items-center">
                 <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
                     <ScrollAnimation animateIn="text-shadow-pop-about-me" animateOnce={true} initiallyVisible={true}>
                         {t('About me')}
@@ -139,14 +139,14 @@ export default function Home() {
                     {t(`Beyond tech, I love exploring new places, listening to great music, and embracing new experiences that fuel my creativity`)}
                 </div>
             </section>
-            <section className="w-full p-5 py-12 md:p-20 min-h-screen bg-[--background]">
+            <section className="w-full p-5 py-12 md:p-20 min-h-screen bg-(--background)">
                 <ScrollAnimation animateIn="motion-preset-slide-right" animateOnce={true}>
                     <section>
-                        <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
+                        <div className={`${interTightHeader.className} pb-5 text-center text-(--about-me-headings) text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                             {t('Experience')}
                         </div>
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)]">
-                            <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
+                            <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:bg-(--about-me-headings) before:to-transparent">
                                 <TimelineItem
                                     date={`${t('February')} 2025 - ${t('Current')}`}
                                     company="Joint Research Center Zeeland"
@@ -165,11 +165,11 @@ export default function Home() {
                         </div>
                     </section>
                     <section className="pt-20">
-                        <div className={`${interTightHeader.className} pb-5 text-center text-[--about-me-headings] text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
+                        <div className={`${interTightHeader.className} pb-5 text-center text-(--about-me-headings) text-[calc(10vw)] md:text-[calc(24px+4vw)]`}>
                             {t('Education')}
                         </div>
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)]">
-                            <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:bg-[--about-me-headings] before:to-transparent">
+                            <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:bg-(--about-me-headings) before:to-transparent">
                                 <TimelineItem
                                     date={`${t('September')} 2022 - ${t('Current')}`}
                                     company={t('HZ University of Applied Sciences')}
@@ -196,7 +196,7 @@ export default function Home() {
                     </section>
                 </ScrollAnimation>
             </section>
-            <section id="portfolio" className="w-full text-white block lg:grid lg:grid-cols-[48%,2%,48%] lg:gap-3 md:min-h-[500px] h-fit bg-[--portfolio] place-items-center">
+            <section id="portfolio" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 md:min-h-[500px] h-fit bg-(--portfolio) place-items-center">
                 <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
                     <ScrollAnimation animateIn="text-shadow-pop-portfolio" animateOnce={true} initiallyVisible={true}>
                         Portfolio
@@ -208,10 +208,10 @@ export default function Home() {
                     {t('These projects highlight a growing passion for technology and problem-solving')}
                 </div>
             </section>
-            <section className="w-full p-5 py-12 md:p-20 bg-[--background]">
+            <section className="w-full p-5 py-12 md:p-20 bg-(--background)">
                 <ScrollAnimation animateIn="motion-preset-slide-left" animateOnce={true}>
                     <div>
-                        <div className={`${interTightHeader.className} text-center text-[--portfolio-headings] text-[calc(8vw)] md:text-[calc(24px+4vw)]`}>
+                        <div className={`${interTightHeader.className} text-center text-(--portfolio-headings) text-[calc(8vw)] md:text-[calc(24px+4vw)]`}>
                             {t('University projects')}
                         </div>
                         <div className="text-center py-10">
