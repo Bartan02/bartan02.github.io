@@ -9,7 +9,7 @@ import github from "@/public/image/icons/footer/github.svg"
 export default function Footer() {
     const t = useTranslations("");
     return (
-        <footer id={"contact-me"} className={`w-full bg-[--footer] ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
+        <footer id={"contact-me"} className={`w-full bg-(--footer) ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
             <div>
                 <div className={`text-5xl md:text-8xl`}>
                     {t('Contact me')}

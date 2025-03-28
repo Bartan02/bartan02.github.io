@@ -27,7 +27,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav id="nav" className="fixed m-8 text-xl right-0 md:right-5 z-20 bg-[--landing-screen] rounded-full p-2 px-3 sm:px-4">
+        <nav id="nav" className="fixed m-8 text-xl right-0 md:right-5 z-20 bg-(--landing-screen) rounded-full p-2 px-3 sm:px-4">
             <div className="navlist list-none flex gap-4 items-center">
                 <div className={'md:flex hidden gap-4'}>
                     <span>
@@ -54,7 +54,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={`mobile-nav ${toggled ? "fixed" : "hidden"} w-full h-dvh top-0 left-0 -z-10 opacity-100 bg-[--background] content-center text-center text-6xl`}>
+            <div className={`mobile-nav ${toggled ? "fixed" : "hidden"} w-full h-dvh top-0 left-0 -z-10 opacity-100 bg-(--background) content-center text-center text-6xl`}>
                 <ul>
                     <li className="hover:font-[900] py-5">
                         <Link href="#about-me" onClick={() => {setToggle(!toggled)}}>{t('About me')}</Link>
