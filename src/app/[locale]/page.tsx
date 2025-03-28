@@ -108,7 +108,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="h-svh w-full bg-(--landing-screen) flex sm:justify-start justify-center overflow-hidden">
+            <section className="h-svh w-full landing-screen flex sm:justify-start justify-center overflow-hidden">
                 <div className="content-end sm:ml-12 lg:ml-16 xl:ml-24 2xl:ml-32">
                     <Image
                         className="sm:w-[calc(100px+15vw+30vh)] w-[calc(200px+10vw+10vh)] pointer-events-none"

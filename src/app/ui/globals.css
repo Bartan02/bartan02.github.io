@@ -1,18 +1,5 @@
 @import 'tailwindcss';
 
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -25,6 +12,7 @@
 
 :root {
   --landing-screen: #D9D9D9;
+  --landing-screen-secondary: #e0e0e0;
   --highlight: #9C9C9C;
   --background: #F2F2F2;
   --about-me: #3866F2;
@@ -50,7 +38,8 @@
 }
 
 :root[class*='dark-mode'] {
-  --landing-screen: #9C9C9C !important;
+  --landing-screen: #6b6b6b !important;
+  --landing-screen-secondary: #6e6e6e !important;
   --highlight: #8a8a8a !important;
   --background: #383838 !important;
   --about-me: #102B76 !important;
@@ -120,6 +109,19 @@ body {
 :root[class*='dark-mode'] .navlist .mobile-nav{
   color: #ffffff;
   mix-blend-mode: unset !important;
+}
+
+/* Landing screen background */
+
+.landing-screen{
+  background-image:  linear-gradient(30deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(150deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(30deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(150deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(60deg, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 25%, transparent 25.5%, transparent 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary))), linear-gradient(60deg, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 25%, transparent 25.5%, transparent 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)));
+  background-size: 156px 273px;
+  background-position: 0 0, 0 0, 78px 136.5px, 78px 136.5px, 0 0, 78px 136.5px;
+  background-color: var(--landing-screen);
+}
+
+:root[class*='dark-mode'] .landing-screen{
+  filter: brightness(0.9);
 }
 
 /* Burger menu */
