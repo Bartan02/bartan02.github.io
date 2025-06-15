@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/navigation';
 import React from "react";
 import {useLocale} from "next-intl";
+import { useState } from 'react';
 
 declare global {
     interface Window { // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -18,10 +19,12 @@ export default function Page() {
     const {t} = useI18n({ namespace: 'common' })
     const locale = useLocale();
     const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;
+        setIsLoading(true);
         try {
             const captcha = window.grecaptcha.getResponse();
             if (!captcha) {
@@ -32,7 +35,7 @@ export default function Page() {
             type MessageType = 'feedback' | 'work' | 'networking' | 'job' | 'other';
 
             const messageTypeMap: Record<MessageType, string> = {
-                feedback: t("Feedback / Suggestion for the Website"),
+                feedback: t("Feedback/suggestion for the Website"),
                 work: t("Work & Collaboration"),
                 networking: t("Networking & Professional Connections"),
                 job: t("Job Offers & Recruiter Outreach"),
@@ -55,12 +58,14 @@ export default function Page() {
                 'fKR78NdlRlZ_zx2qE'
             );
             alert(t('Message sent successfully, thanks! Now you will be redirected to the home page'));
-            window.grecaptcha.reset();
+            // window.grecaptcha.reset();
             form.reset();
             router.push('/'+locale);
         } catch (error) {
             const err = error as Error;
             alert(t('Failed to send message Try again later or reach out to me via eg Linkedin') + (err.message ? `\n\nError: ${err.message}` : ''));
+        } finally {
+            setIsLoading(false);
         }
     };
     return (
@@ -105,9 +110,39 @@ export default function Page() {
                         </div>
                         <div className="g-recaptcha" data-sitekey="6LfWjWErAAAAANahvH2w_OJiJGsar1NSYsnKI96o"></div>
                         <div className="flex items-center">
-                            <button type="submit"
-                                    className={"rounded bg-green-500 px-8 py-2 text-white cursor-pointer"}>{t("Send")}</button>
+                            <button
+                                type="submit"
+                                disabled={isLoading}
+                                className={"rounded bg-green-500 px-8 py-2 text-white cursor-pointer flex items-center justify-center gap-2"}
+                            >
+                                {isLoading && (
+                                    <svg
+                                        className="animate-spin h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <circle
+                                            className="opacity-25"
+                                            cx="12"
+                                            cy="12"
+                                            r="10"
+                                            stroke="currentColor"
+                                            strokeWidth="4"
+                                        ></circle>
+                                        <path
+                                            className="opacity-75"
+                                            fill="currentColor"
+                                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                        ></path>
+                                    </svg>
+                                )}
+                                {t("Send")}
+                            </button>
                         </div>
+                    </div>
+                    <div className={"text-center"}>
+                        <span className={"text-sm"}> The messages are sent via <Link href={"https://www.emailjs.com"} target={"_blank"} className={"underline"}>EmailJS</Link> and are not stored on the server. </span>
                     </div>
                 </form>
             </div>
