@@ -17,7 +17,7 @@
     "Warsaw, Poland": "Varsovie, Pologne",
     "Apprenticeship": "Stage",
     "Creating the web application for searching appropriate install files for ATM machines and the desktop application changing some properties on Windows": "Création de l'application web pour la recherche des fichiers d'installation appropriés pour les distributeurs automatiques de billets et de l'application de bureau pour la modification de certaines propriétés sous Windows",
-    "Education": "Éducation",
+    "Education": "Formation",
     "September": "Septembre",
     "Current": "Actuellement",
     "April": "Avril",
@@ -61,6 +61,8 @@
     "Return": "Retournez",
     "Please complete the reCAPTCHA and then try again to send the message": "Veuillez compléter le reCAPTCHA, puis essayez à nouveau d'envoyer le message.",
     "Message sent successfully, thanks! Now you will be redirected to the home page": "Message envoyé avec succès, merci ! Vous allez maintenant être redirigé vers la page d'accueil.",
-    "Failed to send message Try again later or reach out to me via eg Linkedin": "Échec de l'envoi du message. Essayez à nouveau plus tard ou contactez-moi via Linkedin par exemple."
+    "Failed to send message Try again later or reach out to me via eg Linkedin": "Échec de l'envoi du message. Essayez à nouveau plus tard ou contactez-moi via Linkedin par exemple.",
+    "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Développement d'une application d'anatomie virtuelle en 3D utilisant C++ et Unreal Engine, visant à soutenir le programme de soins infirmiers (Verpleegkunde) de la HZ Univeristy of Applied Sciences.",
+    "July": "Juillet"
   }
 }

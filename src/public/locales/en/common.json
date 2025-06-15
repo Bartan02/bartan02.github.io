@@ -61,6 +61,8 @@
     "Return": "Return",
     "Please complete the reCAPTCHA and then try again to send the message": "Please complete the reCAPTCHA and then try again to send the message.",
     "Message sent successfully, thanks! Now you will be redirected to the home page": "Message sent successfully, thanks! Now you will be redirected to the home page.",
-    "Failed to send message Try again later or reach out to me via eg Linkedin": "Failed to send message. Try again later or reach out to me via e.g. Linkedin."
+    "Failed to send message Try again later or reach out to me via eg Linkedin": "Failed to send message. Try again later or reach out to me via e.g. Linkedin.",
+    "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde).",
+    "July": "July"
   }
 }
