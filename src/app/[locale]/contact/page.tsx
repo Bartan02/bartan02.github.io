@@ -1,11 +1,12 @@
 'use client'
 
-import {useLocale, useTranslations} from "next-intl";
+import { useI18n } from '@/hooks/useI18n';
 import Navbar from "@/app/lib/Navbar";
 import Link from "next/link";
 import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/navigation';
 import React from "react";
+import {useLocale} from "next-intl";
 
 declare global {
     interface Window { // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -14,7 +15,7 @@ declare global {
 }
 
 export default function Page() {
-    const t = useTranslations("");
+    const {t} = useI18n({ namespace: 'common' })
     const locale = useLocale();
     const router = useRouter();
 

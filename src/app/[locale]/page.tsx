@@ -9,9 +9,9 @@ import sporton from "@/public/image/projects/sporton.webp"
 import jrcz from "@/public/image/projects/jrcz.webp"
 import oopgame from "@/public/image/projects/oopgame.webp"
 import stepup from "@/public/image/projects/stepup.webp"
-import { useTranslations } from "next-intl";
 import ScrollAnimation from 'react-animate-on-scroll';
 import React from "react";
+import {useI18n} from "@/hooks/useI18n";
 
 const projects = [
     {
@@ -81,7 +81,7 @@ interface ProjectItemProps {
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description, link, linkText }) => {
-    const t = useTranslations("");
+    const {t} = useI18n({ namespace: 'common' })
     return (
         <div className="relative">
         <Image src={src} alt={alt} className="image" />
@@ -104,7 +104,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description,
     )};
 
 export default function Home() {
-    const t = useTranslations("");
+    const {t} = useI18n({ namespace: 'common' })
     return (
         <>
             <Navbar />
