@@ -73,7 +73,7 @@ export default function Page() {
                     className={"pb-4 text-xl sm:text-2xl"}> {t("Hey there! I am really glad you are here If you have any questions, ideas, or just want to talk — feel free to drop me a message I will get back to you as soon as I can!")}</span>
                 <form className={"flex flex-col gap-3"} action="https://formsubmit.co/el/mofoca" method="POST" onSubmit={handleSubmit}>
                     <label htmlFor="fullname"> {t("Your name")} <span className={"text-red-500"}>*</span></label>
-                    <input type="text" id="fullname" name="fullname" className={"text-lg sm:text-2xl p-2 sm:p-3 rounded"} required/>
+                    <input type="text" id="fullname" name="fullname" className={"bg-(--background) text-lg sm:text-2xl p-2 sm:p-3 rounded"} required/>
                     <label htmlFor="email">{t("Your email")} <span className={"text-red-500"}>*</span></label>
                     <input type="email" id="email" name="email"
                            className={"bg-(--background) text-lg sm:text-2xl p-2 sm:p-3 rounded"} required/>
