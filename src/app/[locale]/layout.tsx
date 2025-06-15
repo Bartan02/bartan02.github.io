@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 // Dynamically import needed messages for given locale
 async function getMessages(locale: string) {
-    const messageModule = await import(`../../public/locales/${locale}/common.json`);
+    const messageModule = await import(`@/public/locales/${locale}/common.json`);
 
     return messageModule.default;
 }
