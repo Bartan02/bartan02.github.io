@@ -1,12 +1,15 @@
-"use client"
+"duse client"
 import Link from "next/link";
 import { interTight, interTightHeader } from "@/app/ui/fonts";
-import { useTranslations } from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import Image from "next/image";
 import linkedin from "@/public/image/icons/footer/linkedin.svg"
 import github from "@/public/image/icons/footer/github.svg"
+import email from "@/public/image/icons/footer/email.svg"
+import React from "react";
 
 export default function Footer() {
+    const locale = useLocale();
     const t = useTranslations("");
     return (
         <footer id={"contact-me"} className={`w-full bg-(--footer) ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
@@ -15,11 +18,14 @@ export default function Footer() {
                     {t('Contact me')}
                 </div>
                 <div className={`md:text-2xl`}>
-                    email: <Link className={"hover:decoration-1 hover:underline"} href={'mailto:contact@badamczyk.eu'} aria-label="Email">
-                        <span className="select-text"> contact@badamczyk.eu </span>
-                    </Link>
+                    email: contact[at]badamczyk[dot]eu
                     <br />
                     <div className={"flex gap-3 pt-2"}>
+                        <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline cursor-pointer"} href={"/" + locale + "/contact"}
+                              aria-label="Form">
+                            <Image src={email} alt={'Email icon'}/>
+                            {t('Contact form')}
+                        </Link>
                         <Link className={"flex gap-1 hover:decoration-1 items-center hover:underline"} href={"https://www.linkedin.com/in/bartosz-a/"} target={"_blank"}
                             aria-label="Linkedin profile">
                             <Image src={linkedin} alt={'Linkedin icon'}/>

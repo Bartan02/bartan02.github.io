@@ -114,6 +114,7 @@ export default function Home() {
                         className="sm:w-[calc(100px+15vw+30vh)] w-[calc(200px+10vw+10vh)] pointer-events-none"
                         src={bartoszadamczyk}
                         alt="Bartosz Adamczyk Photo"
+                        priority={true}
                     />
                 </div>
                 <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(17vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
