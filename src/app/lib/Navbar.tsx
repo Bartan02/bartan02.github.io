@@ -1,7 +1,7 @@
 "use client"
 import {useState, useEffect} from "react";
 import Link from "next/link";
-import {useTranslations } from "next-intl";
+import {useI18n} from "@/hooks/useI18n";
 import LanguageSwitcher from "@/app/lib/LanguageSwitcher";
 import DarkMode from "@/app/lib/DarkMode";
 import { usePathname } from 'next/navigation';
@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
     const [toggled, setToggle] = useState(false);
 
-    const t = useTranslations("");
+    const {t} = useI18n({ namespace: 'common' })
 
     const SCROLLED_STATE_CLASS = "shadow-lg"
 

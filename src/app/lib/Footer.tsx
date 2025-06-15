@@ -1,7 +1,9 @@
-"duse client"
+"use client"
+
+import {useI18n} from "@/hooks/useI18n";
 import Link from "next/link";
 import { interTight, interTightHeader } from "@/app/ui/fonts";
-import {useLocale, useTranslations} from "next-intl";
+import {useLocale} from "next-intl";
 import Image from "next/image";
 import linkedin from "@/public/image/icons/footer/linkedin.svg"
 import github from "@/public/image/icons/footer/github.svg"
@@ -10,7 +12,7 @@ import React from "react";
 
 export default function Footer() {
     const locale = useLocale();
-    const t = useTranslations("");
+    const {t} = useI18n({ namespace: 'common' })
     return (
         <footer id={"contact-me"} className={`w-full bg-(--footer) ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
             <div>
