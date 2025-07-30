@@ -32,7 +32,7 @@ export default function Navbar() {
     const isMainPage = mainPageWithLocales.includes(pathname);
 
     return (
-        <nav id="nav" className={`fixed m-8 text-xl right-0 md:right-5 z-20 bg-(--landing-screen) rounded-full p-2 px-3 sm:px-4`}>
+        <nav id="nav" className={`fixed m-8 text-xl right-0 md:right-5 z-20 bg-(--background) rounded-full p-2 px-3 sm:px-4`}>
             <div className="navlist list-none flex gap-4 items-center">
                 { isMainPage ?
                 <div className={`hidden gap-4 md:flex`}>

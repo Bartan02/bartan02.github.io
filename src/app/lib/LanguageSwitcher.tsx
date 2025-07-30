@@ -46,7 +46,7 @@ export default function LanguageSwitcher() {
     return(
         <div className={'cursor-pointer transition-all'}>
             <Image src={imageSrc} alt={'Flag'} onClick={() => {setIsLanguageSwitch(!isLanguageSwitch)}}/>
-            <div className={`gap-4 text-sm absolute bg-(--landing-screen) p-3 px-6 rounded-full shadow-2xl md:left-[65px] -left-40 md:top-16 top-12 ${isLanguageSwitch ? "flex motion-preset-slide-down motion-duration-200" : 'hidden'}`}>
+            <div className={`gap-4 text-sm absolute bg-(--background) p-3 px-6 rounded-full shadow-2xl md:left-[65px] -left-40 md:top-16 top-12 ${isLanguageSwitch ? "flex motion-preset-slide-down motion-duration-200" : 'hidden'}`}>
                 <div className={'flex flex-col items-center gap-1 hover:bg-(--highlight) rounded-sm'} onClick={() => {changeLanguage('en')}}>
                     <Image src={uk_icon} alt={'UK flag'}/>
                     english
@@ -64,7 +64,7 @@ export default function LanguageSwitcher() {
                     polski
                 </div>
             </div>
-            <div className={`-z-10 absolute border-x-[20px] border-x-transparent border-b-[25px] border-b-(--landing-screen) md:top-12 md:right-12 right-[84px] top-11 ${isLanguageSwitch ? "block motion-preset-slide-down motion-duration-200" : 'hidden'}`}></div>
+            <div className={`-z-10 absolute border-x-[20px] border-x-transparent border-b-[25px] border-b-(--background) md:top-12 md:right-12 right-[84px] top-11 ${isLanguageSwitch ? "block motion-preset-slide-down motion-duration-200" : 'hidden'}`}></div>
         </div>
     );
 }

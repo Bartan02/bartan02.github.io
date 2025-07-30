@@ -1,6 +1,7 @@
 "use client"
 import Image, {StaticImageData} from "next/image";
-import bartoszadamczyk from "../../public/image/bartoszadamczyk.webp";
+import badamczykwhite from "../../public/image/logos/badamczykwhite.svg";
+import badamczyk from "../../public/image/bartoszadamczyk.webp";
 import { interTightHeader } from "@/app/ui/fonts";
 import Navbar from "@/app/lib/Navbar";
 import Footer from "@/app/lib/Footer";
@@ -108,30 +109,32 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="h-svh w-full landing-screen flex sm:justify-start justify-center overflow-hidden">
-                <div className="content-end sm:ml-12 lg:ml-16 xl:ml-24 2xl:ml-32">
-                    <Image
-                        className="sm:w-[calc(100px+15vw+30vh)] w-[calc(200px+10vw+10vh)] pointer-events-none"
-                        src={bartoszadamczyk}
-                        alt="Bartosz Adamczyk Photo"
-                        priority={true}
-                    />
+            <section className="h-svh w-full flex flex-col items-center overflow-hidden text-white">
+                <div className={"absolute gradient -z-20 h-svh w-full"}></div>
+                <div className="flex flex-col justify-center items-center text-center w-full h-full motion-preset-shrink motion-delay-400">
+                        <Image
+                            className="w-[80vw] lg:w-[60vw] pointer-events-none"
+                            src={badamczykwhite}
+                            alt="Bartosz Adamczyk Logo"
+                            priority={true}
+                        />
+                        <span className={`lg:text-4xl sm:text-2xl text-xl ${interTightHeader.className} pt-8 motion-preset-shrink motion-delay-500`}> Bartosz Adamczyk </span>
                 </div>
-                <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-1/2 lg:top-[25vw] sm:top-[23vw] top-[calc(17vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-                    <span className="text-shadow-pop-right tracking-wide text-white text-[calc(24px+5vw)] leading-none inline-block">BARTOSZ <br /> ADAMCZYK</span>
-                </div>
-                <div className={`absolute right-7 sm:right-14 xl:right-32 2xl:top-3/4 lg:top-[40vw] sm:top-[35vw] sm:block hidden top-[calc(35vw+10vh)] text-right -translate-y-1/2 ${interTightHeader.className}`}>
-                    <span className="motion-preset-oscillate motion-duration-2000 tracking-wide text-(--font) text-md sm:text-2xl leading-none inline-block">{t('#discover')} &#x2193;</span>
-                </div>
+                <span className={`motion-preset-oscillate motion-duration-2000 motion-delay-1500 tracking-wide text-lg m-8 ${interTightHeader.className}`}> {t("#discover")} &#x2193; </span>
             </section>
-            <section id="about-me" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 min-h-[500px] h-fit bg-(--about-me) place-items-center">
+            <section id="about-me" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 min-h-[750px] h-fit bg-(--about-me) place-items-center">
                 <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
-                    <ScrollAnimation animateIn="text-shadow-pop-about-me" animateOnce={true} initiallyVisible={true}>
-                        {t('About me')}
-                    </ScrollAnimation>
+                    {t('About me')}
                 </div>
                 <div className="w-[1px] h-3/5 bg-white lg:block hidden"></div>
                 <div className="lg:text-2xl text-xl lg:pl-10 lg:pr-20 p-10">
+                    <Image
+                        className="flex rounded-full w-2/3 lg:w-1/3 mx-auto lg:mx-0 pointer-events-none mb-7"
+                        src={badamczyk}
+                        alt="Bartosz Adamczyk picture"
+                        width={1417}
+                        height={1417}
+                    />
                     {t(`I am Bartosz Adamczyk, currently ICT student at HZ University of Applied Sciences, with a passion for technology, innovation, and creating impactful digital experiences`)}&nbsp;
                     {t(`I would like to introduce mainly my educational and professional background more in details on this page`)}&nbsp;
                     {t(`I am keen on programming and solving technical problems`)}&nbsp;
@@ -199,9 +202,7 @@ export default function Home() {
             </section>
             <section id="portfolio" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 md:min-h-[500px] h-fit bg-(--portfolio) place-items-center">
                 <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)] lg:order-last`}>
-                    <ScrollAnimation animateIn="text-shadow-pop-portfolio" animateOnce={true} initiallyVisible={true}>
-                        Portfolio
-                    </ScrollAnimation>
+                    Portfolio
                 </div>
                 <div className="w-[1px] h-3/5 bg-white lg:block hidden"></div>
                 <div className="lg:text-2xl text-xl lg:pl-20 lg:pr-10 p-10 lg:order-first">
@@ -215,7 +216,7 @@ export default function Home() {
                         <div className={`${interTightHeader.className} text-center text-(--portfolio-headings) text-[calc(8vw)] md:text-[calc(24px+4vw)]`}>
                             {t('University projects')}
                         </div>
-                        <div className="text-center py-10">
+                        <div className="text-center pt-5 pb-10">
                             {t('Hover (or click) on an image to find out more about a specific project')}
                         </div>
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)] grid md:grid-cols-2 gap-3">

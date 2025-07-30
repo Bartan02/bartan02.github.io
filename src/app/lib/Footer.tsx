@@ -8,6 +8,7 @@ import Image from "next/image";
 import linkedin from "@/public/image/icons/footer/linkedin.svg"
 import github from "@/public/image/icons/footer/github.svg"
 import email from "@/public/image/icons/footer/email.svg"
+import badamczykwhite from "../../public/image/logos/badamczykwhite.svg";
 import React from "react";
 
 export default function Footer() {
@@ -42,6 +43,11 @@ export default function Footer() {
                 </div>
             </div>
             <div className={`content-end`}>
+                <Image
+                    className="pt-8 lg:pt-0 lg:w-auto pointer-events-none"
+                    src={badamczykwhite}
+                    alt="Bartosz Adamczyk Logo"
+                />
                 <div className={`md:text-xl lg:text-right pt-2 ${interTight.className}`}>
                     &#169; { new Date().getFullYear() } Bartosz Adamczyk |&nbsp;
                     <Link href={'https://github.com/Bartan02/bartan02.github.io/'}
