@@ -63,6 +63,8 @@
     "Message sent successfully, thanks! Now you will be redirected to the home page": "Message envoyé avec succès, merci ! Vous allez maintenant être redirigé vers la page d'accueil.",
     "Failed to send message Try again later or reach out to me via eg Linkedin": "Échec de l'envoi du message. Essayez à nouveau plus tard ou contactez-moi via Linkedin par exemple.",
     "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Développement d'une application d'anatomie virtuelle en 3D utilisant C++ et Unreal Engine, visant à soutenir le programme de soins infirmiers (Verpleegkunde) de la HZ Univeristy of Applied Sciences.",
-    "July": "Juillet"
+    "July": "Juillet",
+    "The messages are sent via": "Les messages sont envoyés via",
+    "and are not stored on the server": "et ne sont pas stockés sur le serveur."
   }
 }

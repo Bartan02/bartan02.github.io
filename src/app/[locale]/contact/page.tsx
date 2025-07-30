@@ -142,7 +142,7 @@ export default function Page() {
                         </div>
                     </div>
                     <div className={"text-center"}>
-                        <span className={"text-sm"}> The messages are sent via <Link href={"https://www.emailjs.com"} target={"_blank"} className={"underline"}>EmailJS</Link> and are not stored on the server. </span>
+                        <span className={"text-sm"}> {t("The messages are sent via")} <Link href={"https://www.emailjs.com"} target={"_blank"} className={"underline"}>EmailJS</Link> {t("and are not stored on the server")} </span>
                     </div>
                 </form>
             </div>
