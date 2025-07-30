@@ -16,11 +16,11 @@
   --landing-screen-secondary: #e0e0e0;
   --highlight: #9C9C9C;
   --background: #F2F2F2;
-  --about-me: #3866F2;
+  --about-me: #596A9D;
   --about-me-headings: var(--about-me);
-  --portfolio: #154666;
+  --portfolio: #5A819E;
   --portfolio-headings: var(--portfolio);
-  --footer: #A6A6A6;
+  --footer: #484848;
   --font: #000000;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -43,11 +43,11 @@
   --landing-screen-secondary: #6e6e6e !important;
   --highlight: #8a8a8a !important;
   --background: #383838 !important;
-  --about-me: #102B76 !important;
+  --about-me: #424E74 !important;
   --about-me-headings: white !important;
-  --portfolio: #061E2D !important;
+  --portfolio: #2F4252 !important;
   --portfolio-headings: white !important;
-  --footer: #636363 !important;
+  --footer: #111111 !important;
   --font: #FFFFFF !important;
 }
 
@@ -114,15 +114,32 @@ body {
 
 /* Landing screen background */
 
-.landing-screen{
-  background-image:  linear-gradient(30deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(150deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(30deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(150deg, var(--landing-screen-secondary) 12%, transparent 12.5%, transparent 87%, var(--landing-screen-secondary) 87.5%, var(--landing-screen-secondary)), linear-gradient(60deg, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 25%, transparent 25.5%, transparent 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary))), linear-gradient(60deg, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 25%, transparent 25.5%, transparent 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)) 75%, color-mix(in srgb, var(--landing-screen), var(--landing-screen-secondary)));
-  background-size: 156px 273px;
-  background-position: 0 0, 0 0, 78px 136.5px, 78px 136.5px, 0 0, 78px 136.5px;
-  background-color: var(--landing-screen);
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-:root[class*='dark-mode'] .landing-screen{
-  filter: brightness(0.9);
+.gradient {
+  --size: 1200px;
+  --speed: 40s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(#3866F2, #154666);
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (max-width: 550px) {
+  .gradient {
+    --size: 650px;
+  }
 }
 
 /* Burger menu */
@@ -157,38 +174,4 @@ body {
 
 .change .bar3 {
   transform: translate(0, -7px) rotate(45deg);
-}
-
-/* Popping animations */
-
-.text-shadow-pop-right,
-.text-shadow-pop-about-me,
-.text-shadow-pop-portfolio {
-  animation: text-shadow-pop 0.6s forwards;
-}
-
-.text-shadow-pop-right {
-  --text-shadow-end: var(--text-shadow-end-right);
-  --transform-end: var(--transform-end-right);
-}
-
-.text-shadow-pop-about-me {
-  --text-shadow-end: var(--text-shadow-end-about-me);
-  --transform-end: var(--transform-end-about-me);
-}
-
-.text-shadow-pop-portfolio {
-  --text-shadow-end: var(--text-shadow-end-portfolio);
-  --transform-end: var(--transform-end-portfolio);
-}
-
-@keyframes text-shadow-pop {
-  0% {
-    text-shadow: var(--text-shadow-start);
-    transform: translateX(0);
-  }
-  100% {
-    text-shadow: var(--text-shadow-end);
-    transform: translateX(var(--transform-end));
-  }
 }

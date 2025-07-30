@@ -1,17 +1,17 @@
-import {Inter_Tight} from "next/font/google";
+import {Quicksand} from "next/font/google";
 
-export const interTight = Inter_Tight({
-    weight: ['300'],
+export const interTight = Quicksand({
+    weight: ['400'],
     style: ['normal'],
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-inter-tight'
+    variable: '--font-quicksand'
 });
 
-export const interTightHeader = Inter_Tight({
-    weight: ['800'],
+export const interTightHeader = Quicksand({
+    weight: ['700'],
     style: ['normal'],
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-inter-tight-header'
+    variable: '--font-quicksand-header'
 });

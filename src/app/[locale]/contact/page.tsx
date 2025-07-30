@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import React from "react";
 import {useLocale} from "next-intl";
 import { useState } from 'react';
+import {interTightHeader} from "@/app/ui/fonts";
 
 declare global {
     interface Window { // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -72,7 +73,7 @@ export default function Page() {
         <>
             <Navbar/>
             <div className={`text-(--font) font-[300] bg-(--landing-screen) px-4 sm:px-32 xl:px-92 py-4 sm:py-16 flex flex-col min-h-screen`}>
-                <span className={"text-4xl sm:text-6xl pb-4"}>
+                <span className={`text-4xl sm:text-6xl pb-4 ${interTightHeader.className}`}>
                     {t("Contact form")}
                 </span>
                 <span
@@ -142,7 +143,7 @@ export default function Page() {
                         </div>
                     </div>
                     <div className={"text-center"}>
-                        <span className={"text-sm"}> The messages are sent via <Link href={"https://www.emailjs.com"} target={"_blank"} className={"underline"}>EmailJS</Link> and are not stored on the server. </span>
+                        <span className={"text-sm"}> {t("The messages are sent via")} <Link href={"https://www.emailjs.com"} target={"_blank"} className={"underline"}>EmailJS</Link> {t("and are not stored on the server")} </span>
                     </div>
                 </form>
             </div>

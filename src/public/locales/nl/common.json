@@ -63,6 +63,8 @@
     "Message sent successfully, thanks! Now you will be redirected to the home page": "Bericht succesvol verzonden, bedankt! U wordt nu doorgestuurd naar de startpagina.",
     "Failed to send message Try again later or reach out to me via eg Linkedin": "Bericht verzenden mislukt. Probeer het later opnieuw of neem contact met mij op via bijvoorbeeld LinkedIn.",
     "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Ontwikkeling van een 3D virtuele anatomie applicatie met C++ en Unreal Engine, gericht op het ondersteunen van het verpleegkundeprogramma van HZ.",
-    "July": "Juli"
+    "July": "Juli",
+    "The messages are sent via": "Berichten worden verzonden via",
+    "and are not stored on the server": "en worden niet verder op de server opgeslagen."
   }
 }
