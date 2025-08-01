@@ -109,8 +109,8 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="h-svh w-full flex flex-col items-center overflow-hidden text-white">
-                <div className={"absolute gradient -z-20 h-svh max-w-full"}></div>
+            <section className="relative h-svh max-w-full flex flex-col items-center overflow-hidden text-white">
+                <div className={"absolute gradient -z-20 h-svh"}></div>
                 <div className="flex flex-col justify-center items-center text-center w-full h-full motion-preset-shrink motion-delay-400">
                         <Image
                             className="w-[80vw] lg:w-[60vw] pointer-events-none"
