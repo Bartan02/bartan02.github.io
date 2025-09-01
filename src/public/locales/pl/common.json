@@ -65,6 +65,8 @@
     "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Rozwój aplikacji wirtualnej anatomii 3D przy użyciu języka C++ i silnika Unreal Engine, mającej na celu wsparcie kierunku pielęgniarskiego (Verpleegkunde) w HZ University of Applied Sciences.",
     "July": "Lipiec",
     "The messages are sent via": "Wiadomości są wysyłane za pośrednictwem",
-    "and are not stored on the server": "i nie są przechowywane na serwerze."
+    "and are not stored on the server": "i nie są przechowywane na serwerze.",
+    "Teacher assistant": "Asystent nauczyciela",
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Pomoc w prowadzeniu zajęć praktycznych dla studentów pierwszego roku ICT, koncentrujących się na podstawach programowania i tworzeniu stron internetowych."
   }
 }
