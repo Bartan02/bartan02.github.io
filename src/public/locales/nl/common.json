@@ -65,6 +65,8 @@
     "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)": "Ontwikkeling van een 3D virtuele anatomie applicatie met C++ en Unreal Engine, gericht op het ondersteunen van het verpleegkundeprogramma van HZ.",
     "July": "Juli",
     "The messages are sent via": "Berichten worden verzonden via",
-    "and are not stored on the server": "en worden niet verder op de server opgeslagen."
+    "and are not stored on the server": "en worden niet verder op de server opgeslagen.",
+    "Teacher assistant": "Docent Assistent",
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistentie bij het geven van praktische sessies voor eerstejaars ICT-studenten, met de focus op programmeerbasis en webontwikkeling."
   }
 }

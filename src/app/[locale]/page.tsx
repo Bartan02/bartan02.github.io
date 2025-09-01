@@ -20,8 +20,6 @@ const projects = [
         alt: "Sporton project",
         title: "SportON",
         description: "A startup project that enhances the sports experience by providing a platform for broad finding, simple reserving, and easy accessing of sports facilities",
-        link: "https://sporton.online",
-        linkText: "Website"
     },
     {
         src: stepup,
@@ -151,6 +149,13 @@ export default function Home() {
                         </div>
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)]">
                             <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:bg-(--about-me-headings) before:to-transparent">
+                                <TimelineItem
+                                    date={`${t('September')} 2025 - ${t('Current')}`}
+                                    company="HZ University of Applied Sciences"
+                                    location={t('Middelburg, Netherlands')}
+                                    position={t('Teacher assistant')}
+                                    details={[t("Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development")]}
+                                />
                                 <TimelineItem
                                     date={`${t('February')} 2025 - ${t('July')} 2025`}
                                     company="Joint Research Center Zeeland"
