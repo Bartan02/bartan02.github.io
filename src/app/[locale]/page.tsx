@@ -121,18 +121,19 @@ export default function Home() {
                 <span className={`motion-preset-oscillate motion-duration-2000 motion-delay-1500 tracking-wide text-lg m-8 ${interTightHeader.className}`}> {t("#discover")} &#x2193; </span>
             </section>
             <section id="about-me" className="w-full text-white block lg:grid lg:grid-cols-[48%_2%_48%] lg:gap-3 min-h-[750px] h-fit bg-(--about-me) place-items-center">
-                <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center text-[calc(24px+4vw)]`}>
-                    {t('About me')}
+                <div className={`${interTightHeader.className} pt-10 lg:pt-0 text-center flex flex-col items-center text-[calc(24px+4vw)]`}>
+                    <Image
+                        className="flex rounded-full w-2/3 sm:w-1/3 lg:w-2/3 lg:max-w-xl mx-auto lg:mx-0 pointer-events-none mb-7"
+                        src={badamczyk}
+                        alt="Bartosz Adamczyk picture"
+                        width={100}
+                        height={100}
+                    />
+                    <span> {t('About me')} </span>
+
                 </div>
                 <div className="w-[1px] h-3/5 bg-white lg:block hidden"></div>
                 <div className="lg:text-2xl text-xl lg:pl-10 lg:pr-20 p-10">
-                    <Image
-                        className="flex rounded-full w-2/3 lg:w-1/3 mx-auto lg:mx-0 pointer-events-none mb-7"
-                        src={badamczyk}
-                        alt="Bartosz Adamczyk picture"
-                        width={1417}
-                        height={1417}
-                    />
                     {t(`I am Bartosz Adamczyk, currently ICT student at HZ University of Applied Sciences, with a passion for technology, innovation, and creating impactful digital experiences`)}&nbsp;
                     {t(`I would like to introduce mainly my educational and professional background more in details on this page`)}&nbsp;
                     {t(`I am keen on programming and solving technical problems`)}&nbsp;
