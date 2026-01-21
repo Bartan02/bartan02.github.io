@@ -41,7 +41,9 @@
     "#discover": "#discover",
     "January": "Januari",
     "February": "Februari",
-    "Internship": "Stage",
+    "Internship": "Meeloopstage",
+    "Internship high school": "Meeloopstage",
+    "Graduation internship": "Afstudeerstage",
     "Software Engineering Internship": "Software Engineering Stage",
     "Contact form": "Contactformulier",
     "Your name": "Uw voornaam en achternaam",
@@ -67,6 +69,9 @@
     "The messages are sent via": "Berichten worden verzonden via",
     "and are not stored on the server": "en worden niet verder op de server opgeslagen.",
     "Teacher assistant": "Docent Assistent",
-    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistentie bij het geven van praktische sessies voor eerstejaars ICT-studenten, met de focus op programmeerbasis en webontwikkeling."
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistentie bij het geven van praktische sessies voor eerstejaars ICT-studenten, met de focus op programmeerbasis en webontwikkeling.",
+    "Goes, Netherlands": "Goes, Nederland",
+    "Linkedin post": "Linkedin bericht",
+    "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected": "Een webgebaseerde applicatie die complexe verkeersprioriteitsgegevens gemakkelijker te begrijpen maakt. Het helpt wegautoriteiten om prioriteitsaanvraagscenario's te verkennen en opnieuw af te spelen, inzicht te krijgen in wat er bij kruispunten gebeurt, en situaties beter uit te leggen of te diagnosticeren wanneer dingen niet gaan zoals verwacht."
   }
 }

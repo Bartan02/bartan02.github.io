@@ -10,11 +10,20 @@ import sporton from "@/public/image/projects/sporton.webp"
 import jrcz from "@/public/image/projects/jrcz.webp"
 import oopgame from "@/public/image/projects/oopgame.webp"
 import stepup from "@/public/image/projects/stepup.webp"
+import prv from "@/public/image/projects/prv.webp"
 import ScrollAnimation from 'react-animate-on-scroll';
 import React from "react";
 import {useI18n} from "@/hooks/useI18n";
 
 const projects = [
+    {
+        src: prv,
+        alt: "Priority Request Viewer project",
+        title: "Priority Request Viewer",
+        description: "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7419366654423289857/?originTrackingId=KkX%2F5j7cLIWnP7VS9Vexpw%3D%3D",
+        linkText: "Linkedin post"
+    },
     {
         src: sporton,
         alt: "Sporton project",
@@ -151,7 +160,14 @@ export default function Home() {
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)]">
                             <div className="space-y-8 text-2xl relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:bg-(--about-me-headings) before:to-transparent">
                                 <TimelineItem
-                                    date={`${t('September')} 2025 - ${t('Current')}`}
+                                    date={`${t('February')} 2026 - ${t('Current')}`}
+                                    company="Acknowledge B.V."
+                                    location={t('Goes, Netherlands')}
+                                    position={t('Graduation internship')}
+                                    details={[]}
+                                />
+                                <TimelineItem
+                                    date={`${t('September')} 2025 - ${t('January')} 2026`}
                                     company="HZ University of Applied Sciences"
                                     location={t('Middelburg, Netherlands')}
                                     position={t('Teacher assistant')}
@@ -161,14 +177,14 @@ export default function Home() {
                                     date={`${t('February')} 2025 - ${t('July')} 2025`}
                                     company="Joint Research Center Zeeland"
                                     location={t('Middelburg, Netherlands')}
-                                    position={t('Apprenticeship')}
+                                    position={t('Internship')}
                                     details={[t("Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)")]}
                                 />
                                 <TimelineItem
                                     date={`${t('May')} 2021`}
                                     company="Diebold Nixdorf"
                                     location={t('Warsaw, Poland')}
-                                    position={t('Apprenticeship')}
+                                    position={t('Internship high school')}
                                     details={[t(`Creating the web application for searching appropriate install files for ATM machines and the desktop application changing some properties on Windows`)]}
                                 />
                             </div>
