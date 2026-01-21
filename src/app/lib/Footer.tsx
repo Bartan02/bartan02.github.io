@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer id={"contact-me"} className={`w-full bg-(--footer) ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
             <div>
-                <div className={`text-5xl md:text-8xl`}>
+                <div className={`text-5xl md:text-7xl xl:text-8xl`}>
                     {t('Contact me')}
                 </div>
                 <div className={`md:text-2xl`}>
