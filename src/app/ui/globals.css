@@ -28,14 +28,6 @@
   -ms-user-select: none;
   user-select: none;
   overflow-x: hidden;
-  /* Popping animations */
-  --text-shadow-start: 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000;
-  --text-shadow-end-right: 1px 0 #000000, calc(2px + 1vw) 0 #000000;
-  --text-shadow-end-about-me: 1px 0 #000000, calc((2px + 0.8vw) * -1) 0 #000000;
-  --text-shadow-end-portfolio: 1px 0 #000000, calc((2px + 0.8vw)) 0 #000000;
-  --transform-end-right: calc((2px + 1vw) * -1);
-  --transform-end-about-me: calc((2px + 0.8vw) / 2);
-  --transform-end-portfolio: calc((2px + 0.8vw) / -2);
 }
 
 :root[class*='dark-mode'] {

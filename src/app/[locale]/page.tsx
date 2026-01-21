@@ -61,9 +61,9 @@ interface TimelineItemProps {
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ date, company, location, position, details }) => (
-    <div className="relative flex justify-center items-center group">
-        <div className="flex items-center justify-center w-4 h-4 rounded-full border border-(--about-me-headings) bg-(--about-me-headings) text-(--about-me-headings)"></div>
-        <div className="w-[calc(100%)] p-4 text-left">
+    <div className="relative flex">
+        <div className="relative w-4 h-4 top-12 rounded-full border border-(--about-me-headings) bg-(--about-me-headings)"></div>
+        <div className="w-[calc(100%)] text-lg sm:text-2xl p-4 text-left">
             <p>{date}</p>
             <p className="text-4xl flex">{company}</p>
             <p>{location}</p>
@@ -93,17 +93,16 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ src, alt, title, description,
     return (
         <div className="relative">
         <Image src={src} alt={alt} className="image" />
-        <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 opacity-0 bg-(--portfolio)">
+        <div className="block absolute transition top-0 bottom-0 left-0 right-0 ease-linear h-full w-full hover:opacity-95 active:opacity-95 opacity-0 bg-(--portfolio)">
             <div className="text-white p-5 w-full text-center top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2">
-                <span className={`text-2xl lg:text-3xl ${interTightHeader.className}`}>{title}</span>
+                <span className={`text-xl xl:text-2xl ${interTightHeader.className}`}>{title}</span>
                 <br /><br />
-                <span className="lg:text-lg">{t(description)}</span>
+                <p className="text-sm xl:text-sm leading-none">{t(description)}</p>
                 {link && (
                     <>
-                        <br /><br />
-                        <span>
-                                <Link href={link} className="underline decoration-1" target="_blank">{t(linkText)}</Link>
-                            </span>
+                        <span className={"pt-2 block"}>
+                            <Link href={link} className="underline decoration-1 text-sm" target="_blank">{t(linkText)}</Link>
+                        </span>
                     </>
                 )}
             </div>
@@ -239,7 +238,7 @@ export default function Home() {
                             {t('University projects')}
                         </div>
                         <div className="text-center pt-5 pb-10">
-                            {t('Hover (or click) on an image to find out more about a specific project')}
+                            {t('Hover or hold your finger (mobile) on an image to find out more about a specific project')}
                         </div>
                         <div className="xl:px-[calc(15vw)] lg:px-[calc(7vw)] grid md:grid-cols-2 gap-3">
                             {projects.map((project, index) => (
