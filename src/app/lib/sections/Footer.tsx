@@ -2,13 +2,13 @@
 
 import {useI18n} from "@/hooks/useI18n";
 import Link from "next/link";
-import { interTight, interTightHeader } from "@/app/ui/fonts";
+import { interTight, interTightHeader } from "@/app/style/fonts";
 import {useLocale} from "next-intl";
 import Image from "next/image";
 import linkedin from "@/public/image/icons/footer/linkedin.svg"
 import github from "@/public/image/icons/footer/github.svg"
 import email from "@/public/image/icons/footer/email.svg"
-import badamczykwhite from "../../public/image/logos/badamczykwhite.svg";
+import badamczykwhite from "../../../public/image/logos/badamczykwhite.svg";
 import React from "react";
 
 export default function Footer() {

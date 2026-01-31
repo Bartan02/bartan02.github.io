@@ -1,5 +1,5 @@
-import "../ui/globals.css";
-import { interTight } from "@/app/ui/fonts";
+import "@/app/style/globals.css";
+import { interTight } from "@/app/style/fonts";
 import Providers from "@/app/[locale]/providers";
 import { Metadata } from "next";
 import React from "react";
