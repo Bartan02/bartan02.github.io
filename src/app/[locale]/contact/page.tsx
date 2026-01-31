@@ -11,8 +11,9 @@ import { useState } from 'react';
 import {interTightHeader} from "@/app/style/fonts";
 
 declare global {
-    interface Window { // eslint-disable-line @typescript-eslint/no-unused-vars
-        grecaptcha: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line no-unused-vars
+    interface Window {
+        grecaptcha: any;
     }
 }
 
