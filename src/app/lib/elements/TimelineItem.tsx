@@ -11,7 +11,7 @@ export const TimelineItem: React.FC<Experience> = ({ date, company, location, po
                 <p>{date.split(" ").map(word => {
                     return /[\d-]/.test(word) ? word  : t(word) + " ";
                 })}</p>
-                <p className="text-4xl flex">{company}</p>
+                <p className="text-4xl flex">{t(company)}</p>
                 <p>{t(location)}</p>
                 <br />
                 <p>{t(position)}</p>
