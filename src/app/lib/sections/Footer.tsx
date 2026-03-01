@@ -2,13 +2,13 @@
 
 import {useI18n} from "@/hooks/useI18n";
 import Link from "next/link";
-import { interTight, interTightHeader } from "@/app/ui/fonts";
+import { interTight, interTightHeader } from "@/app/style/fonts";
 import {useLocale} from "next-intl";
 import Image from "next/image";
 import linkedin from "@/public/image/icons/footer/linkedin.svg"
 import github from "@/public/image/icons/footer/github.svg"
 import email from "@/public/image/icons/footer/email.svg"
-import badamczykwhite from "../../public/image/logos/badamczykwhite.svg";
+import badamczykwhite from "../../../public/image/logos/badamczykwhite.svg";
 import React from "react";
 
 export default function Footer() {
@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer id={"contact-me"} className={`w-full bg-(--footer) ${interTightHeader.className} text-white p-4 md:p-16 block lg:justify-between lg:flex`}>
             <div>
-                <div className={`text-5xl md:text-8xl`}>
+                <div className={`text-5xl md:text-7xl xl:text-8xl`}>
                     {t('Contact me')}
                 </div>
                 <div className={`md:text-2xl`}>

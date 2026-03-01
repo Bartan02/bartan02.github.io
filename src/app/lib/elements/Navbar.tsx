@@ -2,8 +2,8 @@
 import {useState, useEffect} from "react";
 import Link from "next/link";
 import {useI18n} from "@/hooks/useI18n";
-import LanguageSwitcher from "@/app/lib/LanguageSwitcher";
-import DarkMode from "@/app/lib/DarkMode";
+import LanguageSwitcher from "@/app/lib/elements/LanguageSwitcher";
+import DarkMode from "@/app/lib/elements/DarkMode";
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {

@@ -32,7 +32,7 @@
     "Passed and received EE08 (Installation and operation of computer systems, peripherals and networks) and EE09 (Programming, development and administration of websites and databases) qualifications issued by CKE (Polish examination board)": "Réussite et obtention des qualifications EE08 (installation et exploitation de systèmes informatiques, de périphériques et de réseaux) et EE09 (programmation, développement et administration de sites web et de bases de données) délivrées par la CKE (commission d'examen polonaise)",
     "Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement": "Découvrez une collection de sites web et d'applications développés dans un souci de simplicité, de fonctionnalité et d'amélioration continue",
     "University projects": "Projets universitaires",
-    "Hover (or click) on an image to find out more about a specific project": "Survolez (ou cliquez) une image pour en savoir plus sur un projet spécifique.",
+    "Hover or hold your finger (mobile) on an image to find out more about a specific project": "Survolez ou maintenez votre doigt (mobile) sur une image pour en savoir plus sur un projet spécifique.",
     "These projects highlight a growing passion for technology and problem-solving": "Ces projets témoignent d'une passion croissante pour la technologie et la résolution de problèmes",
     "An educational game for kids, aged around 8-10, about identity theft issue and preventing from it": "Un jeu éducatif pour les enfants, âgés de 8 à 10 ans, sur le thème de l'usurpation d'identité et de sa prévention.",
     "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste": "Une application qui permet de visualiser clairement les relevés de température dans les pièces du bâtiment du Joint Research Center Zeeland et ainsi de surveiller les températures passées afin d'analyser et de réduire les gaspillages d'énergie.",
@@ -41,7 +41,9 @@
     "#discover": "#découvrir",
     "January": "Janvier",
     "February": "Février",
-    "Internship": "Stage",
+    "Internship": "Stage de pratique",
+    "Internship high school": "Stage de pratique",
+    "Graduation internship": "Stage de fin d'études",
     "Software Engineering Internship": "Stage en génie logiciel",
     "Contact form": "Formulaire de contact",
     "Your name": "Votre prénom et nom",
@@ -67,6 +69,12 @@
     "The messages are sent via": "Les messages sont envoyés via",
     "and are not stored on the server": "et ne sont pas stockés sur le serveur.",
     "Teacher assistant": "Assistant de professeur",
-    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistance à la conduite de séances pratiques pour les étudiants de première année en TIC, axées sur les bases de la programmation et le développement web."
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistance à la conduite de séances pratiques pour les étudiants de première année en TIC, axées sur les bases de la programmation et le développement web.",
+    "Goes, Netherlands": "Goes, Pays-Bas",
+    "Linkedin post": "Publication à Linkedin",
+    "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected": "Une application web qui facilite la compréhension des données complexes de priorité de trafic. Elle aide les autorités routières à explorer et à rejouer des scénarios de demande de priorité, à mieux comprendre ce qui se passe aux intersections, et à mieux expliquer ou diagnostiquer les situations où les choses ne se passent pas comme prévu.",
+    "Diebold Nixdorf": "Diebold Nixdorf",
+    "Joint Research Center Zeeland": "Joint Research Center Zeeland",
+    "Acknowledge BV": "Acknowledge B.V."
   }
 }

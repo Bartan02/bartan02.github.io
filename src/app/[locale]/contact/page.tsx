@@ -1,18 +1,19 @@
 'use client'
 
 import { useI18n } from '@/hooks/useI18n';
-import Navbar from "@/app/lib/Navbar";
+import Navbar from "@/app/lib/elements/Navbar";
 import Link from "next/link";
 import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/navigation';
 import React from "react";
 import {useLocale} from "next-intl";
 import { useState } from 'react';
-import {interTightHeader} from "@/app/ui/fonts";
+import {interTightHeader} from "@/app/style/fonts";
 
 declare global {
-    interface Window { // eslint-disable-line @typescript-eslint/no-unused-vars
-        grecaptcha: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line no-unused-vars
+    interface Window {
+        grecaptcha: any;
     }
 }
 

@@ -15,7 +15,7 @@
     "Experience": "Experience",
     "May": "May",
     "Warsaw, Poland": "Warsaw, Poland",
-    "Apprenticeship": "Apprenticeship",
+    "Graduation internship": "Graduation Internship",
     "Creating the web application for searching appropriate install files for ATM machines and the desktop application changing some properties on Windows": "Creating the web application for searching appropriate install files for ATM machines and the desktop application changing some properties on Windows",
     "Education": "Education",
     "September": "September",
@@ -32,7 +32,7 @@
     "Passed and received EE08 (Installation and operation of computer systems, peripherals and networks) and EE09 (Programming, development and administration of websites and databases) qualifications issued by CKE (Polish examination board)": "Passed and received EE.08 (Installation and operation of computer systems, peripherals and networks) and EE.09 (Programming, development and administration of websites and databases) qualifications issued by CKE (Polish examination board)",
     "Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement": "Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement",
     "University projects": "University projects",
-    "Hover (or click) on an image to find out more about a specific project": "Hover (or click) on an image to find out more about a specific project",
+    "Hover or hold your finger (mobile) on an image to find out more about a specific project": "Hover or hold your finger (mobile) on an image to find out more about a specific project.",
     "These projects highlight a growing passion for technology and problem-solving": "These projects highlight a growing passion for technology and problem-solving",
     "An educational game for kids, aged around 8-10, about identity theft issue and preventing from it": "An educational game for kids, aged around 8-10, about identity theft issue and preventing from it.",
     "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste": "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste.",
@@ -42,6 +42,7 @@
     "January": "January",
     "February": "February",
     "Internship": "Internship",
+    "Internship high school": "Internship",
     "Software Engineering Internship": "Software Engineering Internship",
     "Contact form": "Contact form",
     "Your name": "Your name and surname",
@@ -67,6 +68,12 @@
     "The messages are sent via": "The messages are sent via",
     "and are not stored on the server": "and are not stored on the server.",
     "Teacher assistant": "Teacher Assistant",
-    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development."
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development.",
+    "Goes, Netherlands": "Goes, Netherlands",
+    "Linkedin post": "Linkedin post",
+    "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected": "A web-based application that makes complex traffic priority data easier to understand. It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected.",
+    "Diebold Nixdorf": "Diebold Nixdorf",
+    "Joint Research Center Zeeland": "Joint Research Center Zeeland",
+    "Acknowledge BV": "Acknowledge B.V."
   }
 }

@@ -1,0 +1,36 @@
+[
+  {
+    "date": "February 2026 - Current",
+    "company": "Acknowledge BV",
+    "location": "Goes, Netherlands",
+    "position": "Graduation internship",
+    "details": []
+  },
+  {
+    "date": "September 2025 - January 2026",
+    "company": "HZ University of Applied Sciences",
+    "location": "Middelburg, Netherlands",
+    "position": "Teacher assistant",
+    "details": [
+      "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development"
+    ]
+  },
+  {
+    "date": "February 2025 - July 2025",
+    "company": "Joint Research Center Zeeland",
+    "location": "Middelburg, Netherlands",
+    "position": "Internship",
+    "details": [
+      "Developing a 3D virtual anatomy application using C++ and Unreal Engine, aimed at supporting HZ’s nursing program (Verpleegkunde)"
+    ]
+  },
+  {
+    "date": "May 2021",
+    "company": "Diebold Nixdorf",
+    "location": "Warsaw, Poland",
+    "position": "Internship high school",
+    "details": [
+      "Creating the web application for searching appropriate install files for ATM machines and the desktop application changing some properties on Windows"
+    ]
+  }
+]

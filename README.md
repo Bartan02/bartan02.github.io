@@ -1,68 +1,50 @@
-# BARTOSZ ADAMCZYK
-__Welcome to my portfolio website repository!__ This project showcases my web development skills and serves as a collection of my work, featuring various projects and experiments with modern web technologies.
+# Bartosz Adamczyk
 
-## 🖥️ Technologies Used
+Welcome to the repository for my personal portfolio website. This repository contains a modern Next.js (App Router) project written in TypeScript, styled with Tailwind CSS, and localized with next-intl.
 
-The website is built using a range of front-end and back-end technologies:
+## Key technologies
 
-- **Next.js:** The primary React-based framework for server-side rendering (SSR), static site generation (SSG), and hybrid applications.
-- **React:** A JavaScript library for building user interfaces, used to create a seamless, component-based architecture.
-- **TypeScript:** Superset of JavaScript for type safety and better developer experience.
-- **Tailwind CSS:** CSS preprocessor for better styling organization and maintainability.
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- next-intl (internationalization)
+- animate.css + react-animate-on-scroll (page animations)
+- tailwindcss-motion (motion utility classes for Tailwind)
+- @emailjs/browser (client email sending)
+- sharp (image processing)
 
-The following libraries/frameworks were implemented on this portfolio website to enrich it:
+## Project structure (important folders)
 
-- **i18next:** internationalization framework that enables multi-language support in the portfolio.
-- **animate.css:** CSS animation library that provides pre-defined animations to bring elements to life.
-- **react-animate-on-scroll:** React wrapper for animate.css, allowing elements to animate when they appear in the viewport.
-- **tailwindcss-motion:** extends Tailwind CSS with utility classes for motion and transitions.
+- `src/app/` — Next.js App Router pages and layouts
+  - `src/app/[locale]/` — localized routes and providers
+  - `src/app/lib/` — reusable UI elements (Navbar, DarkMode, TimelineItem, etc.)
+  - `src/app/style/` — font and global style configuration
+- `src/hooks/` — custom React hooks
+- `public/` — static assets (images, locale json files, logos, project screenshots)
+- `package.json` — scripts and dependency list
+- `pnpm-lock.yaml` — pnpm lockfile
 
 
-### DevOps & Hosting
-- **Version Control (Git):** To keep track of changes and manage different project versions.
-- **GitHub:** For repository management and collaboration.
-- **GitHub Pages:** For hosting the webpage.
+## Internationalization
 
-## 📁 Features
+This project uses `next-intl` for localization. Translation files live under `public/locales/{locale}/common.json` (for example `public/locales/en/common.json`). The app is configured with localized routes under `src/app/[locale]`.
 
-- **Portfolio Showcase:** A collection of web development projects demonstrating a variety of skills.
-- **Interactive Elements:** Includes animations, dynamic forms, and user-friendly interfaces.
-- **Responsive Design:** Built to provide an optimal viewing experience across all devices.
-- **Dark/Light Mode:** Theme toggle for user preference.
-- **Language Choice:** View the page and read its content with one of available languages: English, French, Dutch and Polish.
 
-## 🚀 Getting Started
+## Animations and styling
 
-To run this project locally, follow these steps:
+Animations use `animate.css` and the React wrapper `react-animate-on-scroll`. Tailwind CSS is configured and extended with `tailwindcss-motion` for motion utilities.
 
-1. **Clone the repository:**
-   ```git clone https://github.com/Bartan02/bartan02.github.io.git```
-2. **Navigate to the project directory:**
-   ```cd bartan02.github.io```
-3. **Install dependencies:**
-   ```npm install```
-4. **Start the development server:**
-   ```npm run dev```
-5. **Open your browser and navigate to:**
-   ```http://localhost:3000```
+## Live demo
 
-### 🔧 Project Structure
+Live site: https://badamczyk.eu
 
-	/src:               Contains all source code files (components, styles, assets, etc.).
-	/src/hooks:         Includes some custom hooks that help e.g. improve code reusability and maintainability.
-	/src/public:        Public static files like images and index.html.
-    /src/app/[locale]:  Includes all pages of this website.
-	/src/app/lib:       All website elements like e.g. header, footer.
-    /src/app/ui:        All styling-related files incl. fonts configuration and animations.
 
-## 📜 License
+## License
 
-This project is open source and available under the MIT License.
+This project is available under the MIT License.
 
-## 🌐 Live Demo
 
-Check out the live version of my portfolio at [badamczyk.eu](https://badamczyk.eu)
+## Contact
 
-## 📬 Contact
-
-For questions, suggestions, or collaboration, feel free to open an issue or reach out via [email](mailto:contact@badamczyk.eu?subject=[GitHub]%20[*Fill%20in%20your%20mail%20topic*]).
+If you have questions or suggestions, open an issue or email: contact@badamczyk.eu

@@ -32,7 +32,7 @@
     "Passed and received EE08 (Installation and operation of computer systems, peripherals and networks) and EE09 (Programming, development and administration of websites and databases) qualifications issued by CKE (Polish examination board)": "Geslaagd voor en in het bezit van EE08 (Installatie en bediening van computersystemen, randapparatuur en netwerken) en EE09 (Programmeren, ontwikkelen en beheren van websites en databases) kwalificaties afgegeven door CKE (Poolse examencommissie)",
     "Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement": "Ontdek een verzameling websites en applicaties die zijn ontwikkeld met de focus op eenvoud, functionaliteit en voortdurende verbetering",
     "University projects": "Universiteitsprojecten",
-    "Hover (or click) on an image to find out more about a specific project": "Beweeg (of klik) over een afbeelding om meer te weten te over een specifiek project",
+    "Hover or hold your finger (mobile) on an image to find out more about a specific project": "Beweeg de muis over of houd uw vinger (mobiel) op een afbeelding om meer te weten te komen over een specifiek project.",
     "These projects highlight a growing passion for technology and problem-solving": "Deze projecten benadrukken een groeiende passie voor technologie en het oplossen van problemen",
     "An educational game for kids, aged around 8-10, about identity theft issue and preventing from it": "Een educatief spel voor kinderen van ongeveer 8-10 jaar over identiteitsdiefstal en het voorkomen daarvan.",
     "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste": "Een applicatie die een duidelijke visualisatie biedt van de temperatuur in het gebouw van het Joint Research Center Zeeland en zo helpt bij het monitoren van temperaturen uit het verleden om energieverspilling te analyseren en te verminderen.",
@@ -41,7 +41,9 @@
     "#discover": "#discover",
     "January": "Januari",
     "February": "Februari",
-    "Internship": "Stage",
+    "Internship": "Meeloopstage",
+    "Internship high school": "Meeloopstage",
+    "Graduation internship": "Afstudeerstage",
     "Software Engineering Internship": "Software Engineering Stage",
     "Contact form": "Contactformulier",
     "Your name": "Uw voornaam en achternaam",
@@ -67,6 +69,12 @@
     "The messages are sent via": "Berichten worden verzonden via",
     "and are not stored on the server": "en worden niet verder op de server opgeslagen.",
     "Teacher assistant": "Docent Assistent",
-    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistentie bij het geven van praktische sessies voor eerstejaars ICT-studenten, met de focus op programmeerbasis en webontwikkeling."
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Assistentie bij het geven van praktische sessies voor eerstejaars ICT-studenten, met de focus op programmeerbasis en webontwikkeling.",
+    "Goes, Netherlands": "Goes, Nederland",
+    "Linkedin post": "Linkedin bericht",
+    "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected": "Een webgebaseerde applicatie die complexe verkeersprioriteitsgegevens gemakkelijker te begrijpen maakt. Het helpt wegautoriteiten om prioriteitsaanvraagscenario's te verkennen en opnieuw af te spelen, inzicht te krijgen in wat er bij kruispunten gebeurt, en situaties beter uit te leggen of te diagnosticeren wanneer dingen niet gaan zoals verwacht.",
+    "Diebold Nixdorf": "Diebold Nixdorf",
+    "Joint Research Center Zeeland": "Joint Research Center Zeeland",
+    "Acknowledge BV": "Acknowledge B.V."
   }
 }

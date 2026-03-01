@@ -32,7 +32,7 @@
     "Passed and received EE08 (Installation and operation of computer systems, peripherals and networks) and EE09 (Programming, development and administration of websites and databases) qualifications issued by CKE (Polish examination board)": "Uzyskanie kwalifikacji EE.08 (Montaż i eksploatacja systemów komputerowych, urządzeń peryferyjnych i sieci) oraz EE.09 (Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych) wydanych przez CKE.",
     "Explore a collection of websites and applications developed with a focus on simplicity, functionality, and continuous improvement": "Zapoznaj się z kolekcją stron internetowych i aplikacji opracowanych z naciskiem na prostotę, funkcjonalność i ciągłe doskonalenie.",
     "University projects": "Projekty uczelniane",
-    "Hover (or click) on an image to find out more about a specific project": "Najedź kursorem (lub kliknij) na obraz, aby dowiedzieć się więcej o konkretnym projekcie.",
+    "Hover or hold your finger (mobile) on an image to find out more about a specific project": "Najedź kursorem lub przytrzymaj palec (na urządzeniu mobilnym) na obrazie, aby dowiedzieć się więcej o konkretnym projekcie.",
     "These projects highlight a growing passion for technology and problem-solving": "Projekty te podkreślają moją rosnącą pasję do technologii i rozwiązywania problemów",
     "An educational game for kids, aged around 8-10, about identity theft issue and preventing from it": "Gra edukacyjna dla dzieci w wieku około 8-10 lat dotycząca tematu kradzieży tożsamości i zapobieganiu jej.",
     "An application that provides with clear visualization of temperature room records inside Joint Research Center Zeeland building and thus helps monitor past temperatures in order to analyze and reduce energy waste": "Aplikacja, która zapewnia przejrzystą wizualizację zapisów temperatur w pomieszczeniach budynku Joint Research Center Zeeland, a tym samym pomaga monitorować przeszłe temperatury w celu analizy i zmniejszenia strat energii.",
@@ -41,7 +41,9 @@
     "#discover": "#discover",
     "January": "Styczeń",
     "February": "Luty",
-    "Internship": "Staż",
+    "Internship": "Praktyka studencka",
+    "Internship high school": "Praktyka szkolna",
+    "Graduation internship": "Praktyka dyplomowa",
     "Software Engineering Internship": "Staż w dziedzinie inżynierii oprogramowania",
     "Contact form": "Formularz kontaktowy",
     "Your name": "Twoje imię i nazwisko",
@@ -67,6 +69,12 @@
     "The messages are sent via": "Wiadomości są wysyłane za pośrednictwem",
     "and are not stored on the server": "i nie są przechowywane na serwerze.",
     "Teacher assistant": "Asystent nauczyciela",
-    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Pomoc w prowadzeniu zajęć praktycznych dla studentów pierwszego roku ICT, koncentrujących się na podstawach programowania i tworzeniu stron internetowych."
+    "Assisting in conducting practical sessions for first-year ICT students, focusing on programming basics and web development": "Pomoc w prowadzeniu zajęć praktycznych dla studentów pierwszego roku ICT, koncentrujących się na podstawach programowania i tworzeniu stron internetowych.",
+    "Goes, Netherlands": "Goes, Niderlandy",
+    "Linkedin post": "Post na Linkedin",
+    "A web-based application that makes complex traffic priority data easier to understand It helps road authorities explore and replay priority request scenarios, gain insight into what happens at intersections, and better explain or diagnose situations where things do not go as expected": "Aplikacja internetowa, która ułatwia zrozumienie skomplikowanych danych dotyczących priorytetów ruchu drogowego. Pomaga władzom drogowym eksplorować i odtwarzać scenariusze żądań priorytetowych, uzyskać wgląd w to, co dzieje się na skrzyżowaniach, oraz lepiej wyjaśniać lub diagnozować sytuacje, w których rzeczy nie przebiegają zgodnie z oczekiwaniami.",
+    "Diebold Nixdorf": "Diebold Nixdorf",
+    "Joint Research Center Zeeland": "Joint Research Center Zeeland",
+    "Acknowledge BV": "Acknowledge B.V."
   }
 }
