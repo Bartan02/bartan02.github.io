@@ -1,0 +1,92 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import type { ProjectProps } from "@types";
+
+import { useTranslations } from '../content/ui.ts';
+
+const lang = (Astro.currentLocale || 'en')  as 'en' | 'pl' | 'nl' | 'fr';
+
+const t = useTranslations(lang);
+
+interface Props {
+  projects: ProjectProps;
+}
+
+const { projects } = Astro.props;
+---
+
+<Section text={projects.title as any} href={projects.title == "projects" ? "projects" : ""}>
+  <p class="text-base text-neutral mb-12">
+    {projects.foreword}
+  </p>
+  {
+    projects.projectsList.map(({ name, summary, image, linkPreview, linkSource, linkPost, notYetReleased }, index) => {
+      const top = 98 + index * 40;
+      return (
+          <div
+              style={`top: ${top}px;`}
+              class="sticky mb-12 rounded-2xl border border-neutral/20 bg-black"
+          >
+            <div class="relative z-1 grid w-full grid-cols-1 sm:grid-cols-2 rounded-2xl bg-[#1c232d]/85 md:min-h-96">
+              <div class="px-6 pt-12 flex flex-col">
+                <h3 class="mb-5 font-serif text-3xl font-medium text-primary">
+                  {name}
+                </h3>
+                <p class="text-sm text-neutral">{summary}</p>
+                <div class="flex flex-wrap gap-5 py-10 text-white mt-auto">
+                  {linkSource ?
+                      <a
+                          href={linkSource}
+                          target="_blank"
+                          class="after:relative after:-bottom-1.25 after:content-[url(/icons/external.svg)] hover:underline"
+                      >
+                        {t('project.source')}
+                      </a>
+                      : null
+                  }
+                  {linkPreview ?
+                      <a
+                          href={linkPreview}
+                          target="_blank"
+                          class="after:relative after:-bottom-1.25 after:content-[url(/icons/external.svg)] hover:underline"
+                      >
+                        {t('project.preview')}
+                      </a>
+                      : null
+                  }
+                  {linkPost ?
+                      <a
+                          href={linkPost}
+                          target="_blank"
+                          class="after:relative after:-bottom-1.25 after:content-[url(/icons/external.svg)] hover:underline"
+                      >
+                        {t('project.post')}
+                      </a>
+                      : null
+                  }
+                </div>
+              </div>
+              <div class="relative w-full h-full min-h-70 sm:min-h-0">
+                <div class="absolute bottom-0 right-0 max-w-full max-h-full overflow-hidden rounded-ss-xl rounded-ee-2xl">
+                  <Image
+                      class="block h-auto w-auto max-w-full max-h-full object-cover object-top-left"
+                      src={image}
+                      alt={name}
+                      width="736"
+                      height="483"
+                  />
+                  {notYetReleased && (
+                      <div class="absolute -right-12 top-7 z-10 w-48 rotate-45 bg-amber-500 py-1.5 text-center text-[10px] font-extrabold uppercase tracking-widest text-neutral-950 shadow-lg">
+                        {t('project.in_development')}
+                      </div>
+                  )}
+                </div>
+              </div>
+
+            </div>
+          </div>
+      );
+    })
+  }
+</Section>

@@ -1,0 +1,42 @@
+---
+import type { HeroProps } from "@types";
+import {Image} from "astro:assets";
+type Props = HeroProps;
+
+import { useTranslations } from '../content/ui.ts';
+
+const lang = (Astro.currentLocale || 'en')  as 'en' | 'pl' | 'nl' | 'fr';
+
+const t = useTranslations(lang);
+
+const { name, specialty, summary, siteLogo } = Astro.props;
+---
+
+<section class="pt-24 md:pt-32 h-[calc(100vh-150px)] mb-5" data-motion="motion-preset-slide-right motion-ease-spring-smooth motion-delay-100" id="#hero">
+  <div class="md:mb-4 mb-3">
+    <Image
+        src={siteLogo}
+        width="600"
+        height="600"
+        alt="badamczyk logo"
+        priority
+    />
+  </div>
+  <p class="md:mb-4 mb-1 text-base text-white text-[1.1rem] md:text-lg">
+    {name}
+  </p>
+  <p
+    class="md:mb-6 mb-3 font-serif text-2xl md:text-4xl leading-11.5 font-bold tracking-tighter text-primary"
+  >
+    {specialty}
+  </p>
+  <p class="font-normal mb-6 text-neutral text-xs">
+    {summary}
+  </p>
+  <div class="flex flex-row relative text-neutral text-xs items-center">
+    <p class="inline-flex items-center before:content-[url(/icons/down-button.svg)] before:mr-2 before:inline-flex before:items-center">
+      {t('hero.swipe')}
+    </p>
+  </div>
+
+</section>

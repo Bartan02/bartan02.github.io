@@ -1,0 +1,42 @@
+---
+import { SITE_CONFIG } from "../content/siteConfig.ts";
+import { SITE_CONTENT } from "../content/siteContent.ts";
+
+import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+import Experience from "@components/Experience.astro";
+import Projects from "@components/Projects.astro";
+import About from "@components/About.astro";
+import Waves from "@components/Waves.astro";
+import Contact from "@components/Contact.astro";
+
+import "../styles/global.css";
+
+export function getStaticPaths() {
+  const defaultLang = 'en';
+  const supportedLanguages = Object.keys(SITE_CONFIG);
+
+  return supportedLanguages.map((lang) => {
+    return {
+      params: { lang: lang === defaultLang ? undefined : lang },
+      props: {
+        config: SITE_CONFIG[lang],
+        content: SITE_CONTENT[lang]
+      },
+    };
+  });
+}
+
+const { config, content } = Astro.props;
+
+---
+
+<Layout config={config}>
+  <Waves />
+  <Hero {...content.hero} />
+  <About {...content.about} name={content.hero.name} />
+  <Experience experience={content.experience} />
+  <Projects projects={content.projects} />
+  <Projects projects={content.uniProjects} />
+  <Contact />
+</Layout>

@@ -1,0 +1,55 @@
+---
+import { SITE_CONFIG } from '../content/siteConfig.ts';
+
+const currentLang = Astro.currentLocale || 'en'
+
+const currentConfig = SITE_CONFIG[currentLang];
+---
+
+<div class="relative flex items-center">
+    <button
+            type="button"
+            id="lang-menu-button"
+            class="flex items-center gap-1.5 text-sm font-medium text-neutral pl-1 transition-colors hover:text-white"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+    >
+        <img
+                src={currentConfig.langFlag}
+                alt={`${currentConfig.langLabel}`}
+                class="object-cover"
+        />
+        <span class="text-[10px]">▼</span>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <ul
+            id="lang-menu"
+            class="absolute right-0 top-12 hidden min-w-38 flex-col gap-1 rounded-xl border border-neutral/40 bg-black p-2 text-neutral"
+    >
+        {Object.keys(SITE_CONFIG).map((langCode) => {
+            const languageData = SITE_CONFIG[langCode];
+            const targetUrl = langCode === 'en' ? '/' : `/${langCode}/`;
+            const isActive = langCode === currentLang;
+
+                    return (
+                            <li>
+                                <a
+                                        href={targetUrl}
+                                        class={`flex items-left gap-2 rounded px-3 py-2 text-sm font-medium transition-colors hover:bg-neutral/10 hover:text-white ${
+                                            isActive ? 'text-primary' : ''
+                                        }`}
+                                >
+                                    <img
+                                            src={languageData.langFlag}
+                                            alt={`${languageData.langLabel} flag`}
+                                            class="object-cover"
+                                    />
+                                    <span>{languageData.langLabel}</span>
+                                </a>
+                            </li>
+                    );
+        })}
+    </ul>
+    <script src="../scripts/languageSwitcher.ts"></script>
+</div>
