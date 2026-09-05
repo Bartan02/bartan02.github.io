@@ -1,0 +1,26 @@
+<svg
+   viewBox="0 0 32 32"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3"
+   width="20"
+   height="20"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <title
+     id="title1">arrow-icon</title>
+  <g
+     id="g2"
+     style="fill:#94a3b8;fill-opacity:1">
+    <path
+       d="M 16,0 A 16,16 0 1 0 32,16 16,16 0 0 0 16,0 Z m 0,30 A 14,14 0 1 1 30,16 14,14 0 0 1 16,30 Z"
+       id="path1"
+       style="fill:#94a3b8;fill-opacity:1" />
+    <path
+       d="M 20.26,16.34 17,20.25 V 9 a 1,1 0 1 0 -2,0 v 11.25 l -3.2,-3.91 a 1,1 0 1 0 -1.54,1.27 l 5,6.05 a 1,1 0 0 0 1.54,0 l 5,-6.05 a 1,1 0 0 0 -0.14,-1.41 1,1 0 0 0 -1.4,0.14 z"
+       id="path2"
+       style="fill:#94a3b8;fill-opacity:1" />
+  </g>
+</svg>

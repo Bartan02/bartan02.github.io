@@ -1,0 +1,24 @@
+---
+import { useTranslations } from '../content/ui.ts';
+
+interface Props {
+  text: Parameters<typeof t>[0];
+  href: string;
+}
+
+const { text, href } = Astro.props;
+
+const lang = (Astro.currentLocale || 'en') as 'en' | 'pl' | 'nl' | 'fr';
+
+const t = useTranslations(lang);
+
+---
+
+<section id={href} class="py-12 opacity-0" data-motion="motion-preset-expand motion-ease-spring-smooth">
+  <h2
+      class="mb-14 font-serif text-4xl font-bold tracking-tighter text-white md:text-5xl"
+  >
+    {t(text)}
+  </h2>
+  <slot />
+</section>
