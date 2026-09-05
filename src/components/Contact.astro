@@ -1,0 +1,101 @@
+---
+import Section from "./Section.astro";
+import { useTranslations } from '../content/ui.ts';
+
+const lang = (Astro.currentLocale || 'en') as 'en' | 'pl' | 'nl' | 'fr';
+const t = useTranslations(lang);
+---
+
+<Section text="contact" href="contact">
+    <div class="flex flex-col gap-12 md:gap-8 text-neutral">
+        <p class="text-base text-neutral">
+            {t('contact.foreword')}
+        </p>
+
+        <form id="contact-form" action="https://formsubmit.co/el/mofoca" method="POST"
+              class="flex flex-col w-full p-4 bg-[#1c232d]/85 rounded-2xl relative transition-colors duration-500"
+              data-msg-sending={t('contact.sending')}
+              data-msg-send={t('contact.send')}
+              data-msg-success={t('contact.success')}
+              data-msg-err-captcha={t('contact.err_captcha')}
+              data-msg-err-select={t('contact.err_select')}
+              data-msg-err-general={t('contact.err_general')}>
+
+            <!-- Error Banner -->
+            <div id="form-error-banner" class="hidden mb-4 w-full bg-red-500/10 text-red-500 border border-red-500/50 rounded-lg p-3 text-sm font-medium"></div>
+
+            <!-- Form Inputs Wrapper -->
+            <div id="form-content" class="flex flex-col gap-4 w-full transition-opacity duration-300">
+                <div class="grid lg:grid-cols-2 gap-2 w-full">
+                    <div class="flex lg:flex-row flex-col gap-2">
+                        <label for="fullname" class="line-clamp-1 w-max"> {t('contact.name')}
+                            <span class="text-red-500 align-text-bottom">*</span>
+                        </label>
+                        <input type="text" id="fullname" name="fullname" required class="bg-white text-black rounded-lg lg:px-2 p-3 lg:p-0 lg:flex-1"/>
+                    </div>
+                    <div class="flex lg:flex-row flex-col gap-2">
+                        <label for="email" class="line-clamp-1 w-max"> {t('contact.email')}
+                            <span class="text-red-500 align-text-bottom">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required class="bg-white text-black rounded-lg lg:px-2 p-3 lg:p-0 lg:flex-1"/>
+                    </div>
+                </div>
+
+                <div class="flex lg:flex-row flex-col gap-2">
+                    <label for="type_of_message"> {t('contact.type')}
+                        <span class="text-red-500 align-text-bottom">*</span>
+                    </label>
+                    <select id="type_of_message" name="type_of_message" required class="bg-white text-black rounded-lg lg:px-2 p-3 lg:p-0 lg:flex-1 invalid:text-gray-500">
+                        <option value="" disabled selected> {t('contact.option')}</option>
+                        <option value="work">{t('contact.option.work')}</option>
+                        <option value="networking">{t('contact.option.networking')}</option>
+                        <option value="feedback">{t('contact.option.feedback')}</option>
+                        <option value="job">{t('contact.option.job')}</option>
+                        <option value="other">{t('contact.option.other')}</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col gap-2 mb-2">
+                    <label for="message">{t('contact.message')}
+                        <span class="text-red-500 align-text-bottom">*</span>
+                    </label>
+                    <textarea id="message" name="message" required class="bg-white text-black rounded-lg p-2 min-h-[100px]"></textarea>
+                </div>
+
+                <div class="flex flex-col gap-4 items-center">
+                    <div class="g-recaptcha" data-sitekey={import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY}></div>
+                    <button type="submit" id="submit-btn" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-md flex items-center gap-2 transition-colors disabled:opacity-75 disabled:cursor-wait">
+
+                        <svg id="default-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+
+                        <svg id="loading-spinner" style="display: none;" class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+
+                        <span id="btn-text">{t('contact.send')}</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success State Wrapper -->
+            <div id="form-success" class="hidden flex-col items-center justify-center min-h-[350px] w-full text-white text-center">
+                <svg class="w-20 h-20 mb-4 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p id="success-text" class="text-2xl font-bold"></p>
+            </div>
+
+        </form>
+
+        <p class="text-xs text-neutral text-center mt-4">
+            {t('contact.disclaimer1')}
+            <a href="https://www.emailjs.com" target="_blank" class="underline">EmailJS</a>
+            {t('contact.disclaimer2')}
+        </p>
+    </div>
+
+    <script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="../scripts/contactForm.ts"></script>
+</Section>

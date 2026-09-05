@@ -1,0 +1,101 @@
+---
+import Header from "@components/Header.astro";
+import { Font } from "astro:assets";
+import Footer from "@components/Footer.astro";
+import { SITE_CONFIG as ALL_CONFIGS } from "../content/siteConfig.ts";
+
+const { config } = Astro.props;
+
+const {
+  title,
+  description,
+  siteLogoIcon,
+  navLinks,
+  lang,
+  author,
+  socialLinks,
+  socialImage,
+  canonicalURL,
+} = config;
+
+const defaultLang = 'en';
+const supportedLanguages = Object.keys(ALL_CONFIGS);
+
+const baseUrl = canonicalURL || new URL(Astro.url.pathname, Astro.site).href;
+const currentPath = lang === defaultLang ? '' : lang;
+const currentAbsoluteUrl = new URL(currentPath, baseUrl).href;
+const ogImgUrl = new URL(socialImage, baseUrl).href;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-pt-16 scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <Font cssVariable="--font-inria-header" preload />
+    <Font cssVariable="--font-inria" preload />
+
+    <link rel="canonical" href={currentAbsoluteUrl} />
+    {supportedLanguages.map((l) => (
+        <link
+            rel="alternate"
+            hreflang={l}
+            href={new URL(l === defaultLang ? '' : l, baseUrl).href}
+        />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL('', baseUrl).href} />
+
+    <script is:inline src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <script src="../scripts/lenis.ts"></script>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImgUrl} />
+  </head>
+  <body class="bg-black font-sans">
+    <Header siteLogoIcon={siteLogoIcon} navLinks={navLinks}/>
+    <main class="mx-auto max-w-4xl md:px-5 px-8">
+      <slot />
+    </main>
+    <Footer author={author} socialLinks={socialLinks}/>
+    <script>
+      const initScrollMotion = () => {
+        const elements = document.querySelectorAll('[data-motion]');
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const el = entry.target;
+                  const motionClasses = el.getAttribute('data-motion');
+
+                  if (motionClasses) {
+                    el.classList.add(...motionClasses.trim().split(/\s+/));
+                  }
+
+                  el.classList.remove('invisible', 'opacity-0');
+                  observer.unobserve(el);
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px',
+            }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+      };
+
+      initScrollMotion();
+      document.addEventListener('astro:page-load', initScrollMotion);
+    </script>
+  </body>
+</html>
