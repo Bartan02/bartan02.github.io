@@ -1,4 +1,7 @@
 ---
+import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from "@vercel/speed-insights/astro"
+
 import Header from "@components/Header.astro";
 import { Font } from "astro:assets";
 import Footer from "@components/Footer.astro";
@@ -97,5 +100,7 @@ const ogImgUrl = new URL(socialImage, baseUrl).href;
       initScrollMotion();
       document.addEventListener('astro:page-load', initScrollMotion);
     </script>
+    <Analytics/>
+    <SpeedInsights/>
   </body>
 </html>
