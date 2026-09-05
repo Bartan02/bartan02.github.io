@@ -10,33 +10,35 @@ export default defineConfig({
     defaultLocale: "en",
     locales: ["en", "pl", "nl", "fr"],
     routing: {
-      prefixDefaultLocale: false
-    }
+      prefixDefaultLocale: false,
+    },
   },
-
   fonts: [
     {
-      provider: fontProviders.google(),
+      provider: fontProviders.fontsource(),
       name: "Inria Sans",
+      display: "swap",
       cssVariable: "--font-inria-header",
       fallbacks: ["ui-serif", "serif"],
       weights: [700],
-      subsets: ["latin", "latin-ext"]
+      subsets: ["latin", "latin-ext"],
     },
     {
-      provider: fontProviders.google(),
+      provider: fontProviders.fontsource(),
       name: "Inria Sans",
+      display: "swap",
       cssVariable: "--font-inria",
       fallbacks: ["system-ui", "sans-serif"],
       weights: [400],
-      subsets: ["latin", "latin-ext"]
+      subsets: ["latin", "latin-ext"],
     },
   ],
-
+  build: {
+    inlineStylesheets: "always",
+  },
   vite: {
     plugins: [tailwindcss()],
   },
-
-  site: 'https://badamczyk.eu',
+  site: "https://badamczyk.eu",
   integrations: [sitemap()],
 });
