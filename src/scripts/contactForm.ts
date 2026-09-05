@@ -15,7 +15,19 @@ const successText = document.getElementById('success-text') as HTMLElement | nul
 const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
 const spinner = document.getElementById('loading-spinner') as HTMLElement | null;
 const defaultIcon = document.getElementById('default-icon') as HTMLElement | null;
-const btnText = document.getElementById('btn-text') as HTMLElement | null;
+const btnText = document.getElementById("btn-text") as HTMLElement | null;
+
+form?.addEventListener("focusin", () => {
+    if (!document.getElementById("recaptcha-script")) {
+      const script = document.createElement("script");
+      script.id = "recaptcha-script";
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  },
+  { once: true },
+);
 
 form?.addEventListener('submit', async (e: SubmitEvent) => {
     e.preventDefault();

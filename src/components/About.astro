@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import { Image } from "astro:assets";
+import bartoszadamczyk from "../assets/pictures/bartoszadamczyk.webp"
 import type { AboutProps, HeroProps } from "@types";
 
 type Props = AboutProps & Pick<HeroProps, "name">;
@@ -18,7 +19,7 @@ const { description, image, name } = Astro.props;
     <div class="md:sticky md:top-1/2 md:-translate-y-1/2 md:shrink-0">
       <Image
           class="rounded-2xl"
-          src={image}
+          src={bartoszadamczyk}
           width="260"
           height="260"
           alt={name}

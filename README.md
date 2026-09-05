@@ -35,9 +35,9 @@ The repository follows a modular architecture specific to Astro frameworks. Here
 
 ```text
 📦 src/
+ ┣ 📂 assets/           # Assets packaged as Astro components
  ┣ 📂 components/       # Reusable UI building blocks
  ┣ 📂 content/          # Centralized data and their translations
- ┣ 📂 icons/            # SVG assets packaged as Astro components
  ┣ 📂 layouts/          # Page wrappers and base HTML structures
  ┣ 📂 pages/            # File-based routing (Static & Dynamic pages)
  ┣ 📂 scripts/          # Client-side TypeScript logic
@@ -73,9 +73,6 @@ Houses all client-side JavaScript/TypeScript required for interactivity.
 
 #### `src/types/`
 *   `index.ts`: Strongly types the application's data models (`SiteConfig`, `SiteContent`, `ExperienceProps`, `ProjectProps`), ensuring that any missing translations or incorrect data structures are caught at build time.
-
-#### `src/icons/`
-*   Contains SVGs transformed into Astro components (e.g., `Menu.astro`).
 
 ---
 

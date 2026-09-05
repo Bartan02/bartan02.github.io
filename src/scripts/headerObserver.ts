@@ -80,55 +80,22 @@ document.addEventListener("click", (e: MouseEvent) => {
 
 // Handle header styling & active link detection on scroll
 const onScroll = () => {
-    // 1. Header Background & Logo
-    const scrollThreshold = 600;
-    if (window.scrollY > scrollThreshold) {
-        siteHeader?.classList.remove("bg-transparent");
-        siteHeader?.classList.add("bg-black");
-        siteLogo?.classList.remove("opacity-0", "pointer-events-none");
-        siteLogo?.classList.add("opacity-100");
-    } else {
-        siteHeader?.classList.remove("bg-black");
-        siteHeader?.classList.add("bg-transparent");
-        siteLogo?.classList.remove("opacity-100");
-        siteLogo?.classList.add("opacity-0", "pointer-events-none");
-    }
-
-    // 2. Active Section Detection
-    const sections: { el: HTMLElement; item: HTMLAnchorElement }[] = [];
-
-    navItems.forEach((item) => {
-        const href = item.getAttribute("href");
-        if (href?.startsWith("#")) {
-            const el = document.querySelector<HTMLElement>(href);
-            if (el) {
-                sections.push({ el, item });
-            }
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const activeLink = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+        setActiveItem(activeLink as HTMLAnchorElement);
+      }
     });
+  }, { rootMargin: "-35% 0px -65% 0px" });
 
-    if (sections.length === 0 || !sections[0]) return;
-
-    // Viewport trigger line (35% from the top of the screen)
-    const triggerPoint = window.innerHeight * 0.35;
-
-    // ONLY reset in Hero area
-    const firstSectionTop = sections[0].el.getBoundingClientRect().top;
-    if (firstSectionTop > triggerPoint) {
-        setActiveItem(null);
-        return;
+  navItems.forEach((item) => {
+    const href = item.getAttribute("href");
+    if (href?.startsWith("#")) {
+      const el = document.querySelector<HTMLElement>(href);
+      if (el) observer.observe(el);
     }
-
-    // Keep the indicator active on the latest section passed
-    let current: HTMLAnchorElement = sections[0].item;
-    for (const { el, item } of sections) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= triggerPoint) {
-            current = item;
-        }
-    }
-
-    setActiveItem(current);
+  });
 };
 
 // Run on scroll and resize
